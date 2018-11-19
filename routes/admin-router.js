@@ -6,7 +6,7 @@ const User = require("../models/user-model.js");
 router.get("/admin/users", (req, res, next) => {
 
   if (!req.user || req.user.role !== "admin"){
-    req.flash("error", "Only admins can do that. 🏄🏻‍");
+    // req.flash("error", "Only admins can do that. 🏄🏻‍");
     res.redirect("/");
     return;
   }
