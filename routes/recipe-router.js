@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const Recipe = require("../models/recipe-model.js");
+const Recipe = require("../models/recipes.js");
 
 
 router.get("/recipe/add", (req, res, next) => {

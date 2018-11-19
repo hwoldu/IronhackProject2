@@ -8,6 +8,7 @@
     "dev-windows": "nodemon ./bin/www"
   },
   "dependencies": {
+    "bcrypt": "^3.0.2",
     "body-parser": "^1.18.3",
     "cloudinary": "^1.13.2",
     "connect-flash": "^0.1.1",
@@ -20,6 +21,10 @@
     "mongoose": "^5.2.10",
     "morgan": "^1.9.0",
     "multer": "^1.4.1",
+<<<<<<< HEAD
+=======
+    "multer-storage-cloudinary": "^2.2.1",
+>>>>>>> bf771df41c74a94f62d98c5138d4d5906d47e146
     "node-sass-middleware": "^0.11.0",
     "passport": "^0.4.0",
     "serve-favicon": "^2.5.0"

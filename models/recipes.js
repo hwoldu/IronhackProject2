@@ -2,15 +2,16 @@ const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-const recipeSchema = new Schema ({
+const recipeSchema = new Schema({
 
-title: { type: String, required: true },
-image: { type: String },
-level: { type: String },
-duration: { 
-  type: time,  
-  min: 0, },
-ingredients: { array },
+  title: { type: String, required: true },
+  image: { type: String },
+  level: { type: String },
+  duration: {
+    type: Number,
+    min: 0,
+  },
+  ingredients: {type: Array}, 
 
 });
 
