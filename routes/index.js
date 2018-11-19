@@ -26,13 +26,14 @@ router.get("/settings", (req, res, next) => {
   }
 });
 
-router.post("/process-settings", fileUploader.single("avatarUpload"), (req, res, next) => {
+router.post("/process-settings", (req, res, next) => {
   const {fullName, email} = req.body;
+  // fileUploader.single("avatarUpload"), 
   let toUpdate = {fullName, email};
 
-  if (req.file){
-    toUpdate = {fullName, email, avatar: req.file.secure_url};
-  }
+  // if (req.file){
+  //   toUpdate = {fullName, email, avatar: req.file.secure_url};
+  // }
   
   User.findByIdAndUpdate(
     req.user._id,

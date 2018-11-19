@@ -60,7 +60,7 @@ app.use('/', index);
 const authRouter = require("./routes/auth-router.js");
 app.use("/", authRouter);
 
-const roomRouter = require("./routes/recipe-router.js");
+const recipeRouter = require("./routes/recipe-router.js");
 app.use("/", recipeRouter);
 
 const adminRouter = require("./routes/admin-router.js");
