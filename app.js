@@ -57,5 +57,15 @@ app.locals.title = 'Express - Generated with IronGenerator';
 const index = require('./routes/index');
 app.use('/', index);
 
+const authRouter = require("./routes/auth-router.js");
+app.use("/", authRouter);
+
+const roomRouter = require("./routes/recipe-router.js");
+app.use("/", recipeRouter);
+
+const adminRouter = require("./routes/admin-router.js");
+app.use("/", adminRouter);
+
+
 
 module.exports = app;
