@@ -1,0 +1,24 @@
+<h2>Sign Up</h2>
+
+{{> flash_messages}}
+
+<form action="/signup-process" method="POST">
+
+<label>
+  Full Name: 
+  <input type="text" name="fullName" placeholder="John Smith" />
+  
+  </label>
+
+  <label>
+    Email
+    <input type="text" name="email" placeholder="John@smith.com" />
+  </label>
+
+  <label>
+    Password: 
+    <input type="text" name="originalPassword" placeholder="" />
+  </label>
+
+  <button>Sign Up!</button>
+  </form>
