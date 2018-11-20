@@ -21,7 +21,7 @@ router.post("/process-recipe", (req, res, next) => {
   const owner = req.user._id;
   Recipe.create( { title, level, ingredients, dishType, description, image, duration, season } )
     .then( recipeDoc => {
-      // req.flash("success", "Recipe created successfully 🛋 ");
+      // req.flash("success", "Recipe created successfully 🍪 ");
       res.redirect("/my-recipes");
     })
     .catch(err => next(err));
@@ -30,5 +30,6 @@ router.post("/process-recipe", (req, res, next) => {
 router.get("/recipe-list", (req, res, next) => {
   res.render("recipe-views/recipe-list.hbs");
 });
+
 
 module.exports = router;
