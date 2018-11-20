@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,22 +10,28 @@
   <link href="https://fonts.googleapis.com/css?family=Paytone+One|Work+Sans" rel="stylesheet">
   <link rel="stylesheet" href="/stylesheets/style.css" />
 </head>
+
 <body>
+
   <header>
-  <h1 class="home-title">{{title}}</h1>
+    <div>
+      <h1 class="home-title">{{title}}</h1>
+    </div>
+
+      <nav class="nav-bar">
+        <a href="/">Home</a>
+        <a href="/recipe-list">Recipes</a>
+        <a href="/meal-plan">Meal Plans</a>
+        <a href="/login">Log In</a>
+        <a href="/signup">Sign Up</a>
+      </nav>
   </header>
 
-<nav >
-  <a href="/">Home</a>
-  <a href="/recipe-list">Recipes</a>
-  <a href="/meal-plan">Meal Plans</a>
-  <a href="/login">Log In</a>
-  <a href="/signup">Sign Up</a>
-</nav>
 
 
   {{{body}}}
 
   <script src="/javascripts/script.js"></script>
 </body>
+
 </html>

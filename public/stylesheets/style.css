@@ -5,7 +5,7 @@ body {
   font-family: 'Work Sans', sans-serif; }
 
 a {
-  color: #00B7FF; }
+  color: black; }
 
 html {
   margin: 0; }
@@ -17,16 +17,29 @@ header {
   position: fixed;
   width: 100%;
   height: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   margin: 0; }
+
+.nav-bar {
+  background-color: #222222;
+  margin-top: 90px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around; }
 
 .home-title {
   color: white;
   font-family: 'Paytone One', sans-serif;
   font-size: 300%;
   padding-left: 100px;
-  padding-top: 30px; }
+  padding-top: 30px;
+  margin: 0; }
+
+.index-content {
+  padding-top: 300px; }
+
+.nav-bar a {
+  text-decoration: none;
+  color: white; }
 
 /*# sourceMappingURL=style.css.map */
