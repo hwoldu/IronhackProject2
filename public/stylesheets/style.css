@@ -10,6 +10,18 @@ a {
 html {
   margin: 0; }
 
+.winter h2 {
+  color: blue; }
+
+.spring h2 {
+  color: green; }
+
+.summer h2 {
+  color: yellow; }
+
+.autumn h2 {
+  color: orange; }
+
 header {
   background-image: url("../images/homepage.jpg");
   background-repeat: no-repeat;

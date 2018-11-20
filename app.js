@@ -13,6 +13,7 @@ const flash        = require('connect-flash');
 const passport     = require("passport");
 const session      = require("express-session");
 
+
 //super important & runs code inside 'passport-setup.js'
 require("./config/passport/passport-setup.js");
 
@@ -55,6 +56,22 @@ app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 // initializes passport like a middleware: 
 app.use(passport.initialize());
 app.use(passport.session());
+app.use((req, res, next ) => {
+  if () {
+    res.locals.season = "spring";
+  }
+  else if () {
+    res.locals.season = "summer";
+  }
+  else if () {
+    res.locals.season = "autumn";
+  }
+  else if () {
+    res.locals.season = "winter";
+  }
+  
+  next();
+});
 
 // default value for title local
 app.locals.title = 'Cooking safely';
