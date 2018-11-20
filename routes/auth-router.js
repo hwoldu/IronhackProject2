@@ -9,23 +9,29 @@ router.get("/signup", (req, res, next) => {
   res.render("auth-views/signup-form.hbs");
 });
 
-router.post("/process-signup", (req, res, next) => {
-  const { fullName, email, originalPassword } = req.body;
-  if (!originalPassword || originalPassword.match(/[0-9]/) === null) {
-    // req.flash("error", "Password can't be blank and must contain a number");
-    res.redirect("/signup");
-    return;
-  }
-  const encryptedPassword = bcrypt.hashSync(originalPassword, 10);
-
-  User.create({fullName, username, email, encryptedPassword })
-    .then(userDoc => {
-      // req.flash("success", "Signup success 🤸🏾‍")
-      res.redirect("/");
-
-    })
-    .catch(err => next(err));
+router.get("/meal-plan", (req, res, next) => {
+  res.render("recipe-views/meal-plan.hbs");
 });
+
+
+
+// router.post("/signup-process", (req, res, next) => {
+//   const { fullName, email, originalPassword } = req.body;
+//   if (!originalPassword || originalPassword.match(/[0-9]/) === null) {
+//     // req.flash("error", "Password can't be blank and must contain a number");
+//     res.redirect("auth-views/signup-form");
+//     return;
+//   }
+//   const encryptedPassword = bcrypt.hashSync(originalPassword, 10);
+
+//   User.create({fullName, username, email, encryptedPassword })
+//     .then(userDoc => {
+//       // req.flash("success", "Signup success 🤸🏾‍")
+//       res.redirect("/");
+
+//     })
+//     .catch(err => next(err));
+// });
 
 router.get("/login", (req, res, next) => {
   res.render("auth-views/login-form.hbs");
