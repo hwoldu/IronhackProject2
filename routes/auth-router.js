@@ -4,13 +4,17 @@ const passport = require("passport");
 const User = require("../models/user-model.js");
 const router = express.Router();
 
-
-router.get("/signup", (req, res, next) => {
-  res.render("auth-views/signup-form.hbs");
-});
+//to encrypt passwords
+// const bcrypt = require("bcrypt");
+// const bcrptySalt = 10;
 
 router.get("/meal-plan", (req, res, next) => {
   res.render("recipe-views/meal-plan.hbs");
+});
+
+
+router.get("/signup", (req, res, next) => {
+  res.render("auth-views/signup-form.hbs");
 });
 
 

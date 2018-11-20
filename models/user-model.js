@@ -20,7 +20,7 @@ const userSchema = new Schema ({
   },
 
 }, {
-  timestamps: true 
+  timestamps: { createdAt: "created_At", updatedAt: "updated_At" }
 
 }); 
 
@@ -29,9 +29,11 @@ const userSchema = new Schema ({
 // define the "isAdmin virtual property (its really like a method)
 // CANNOT be an arrow functions it uses THIS 
 // (we use this to get around the limits on if conditions in HBS files)
-userSchema.virtual("isAdmin").get(function () { 
-  return this.role === "admin";
-});
+
+// 🚨 will use this later maybe? 11/20/18 -hw 
+// userSchema.virtual("isAdmin").get(function () { 
+//   return this.role === "admin";
+// });
 
 const User = mongoose.model("User", userSchema);
 
