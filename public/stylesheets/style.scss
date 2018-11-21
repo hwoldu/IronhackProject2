@@ -31,7 +31,6 @@ html {
 
 
 
-
 header {
   background-image: url("../images/homepage.jpg");
   background-repeat: no-repeat;
@@ -46,12 +45,13 @@ header {
 
 .nav-bar {
   background-color: #222222;
-  margin-top: 90px;
+  margin-top: 20px;
   height : 30px;
-  padding: 5px;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
 
 
@@ -72,4 +72,14 @@ header {
 .nav-bar a {
   text-decoration: none;
   color: white;
+}
+
+.list-recipes img {
+  width: 25%;
+  height: 25%;
+}
+
+.list-recipes a {
+  display: flex;
+  text-decoration: none;
 }

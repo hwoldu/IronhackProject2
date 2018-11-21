@@ -60,18 +60,18 @@ app.use(passport.session());
 // seasons date change? 
 app.use((req, res, next ) => {
   
-  if (newDate(March 20 >= ) ) {
-    res.locals.season = "spring";
-  }
-  else if (season=== 5 || 6 || 7 ) {
-    res.locals.season = "summer";
-  }
-  else if (season=== 8 || 9 || 10 ) {
-    res.locals.season = "autumn";
-  }
-  else if (season=== 11 || 0 || 1 ) {
-    res.locals.season = "winter";
-  }
+  // if (newDate(March 20 >= ) ) {
+  //   res.locals.season = "spring";
+  // }
+  // else if (season=== 5 || 6 || 7 ) {
+  //   res.locals.season = "summer";
+  // }
+  // else if (season=== 8 || 9 || 10 ) {
+  //   res.locals.season = "autumn";
+  // }
+  // else if (season=== 11 || 0 || 1 ) {
+  //   res.locals.season = "winter";
+  // }
   
   next();
 });
