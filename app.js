@@ -17,7 +17,6 @@ const session      = require("express-session");
 //super important & runs code inside 'passport-setup.js'
 require("./config/passport/passport-setup.js");
 
-
 mongoose
   .connect('mongodb://localhost/project-two', {useNewUrlParser: true})
   .then(x => {
@@ -57,21 +56,43 @@ app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 app.use(passport.initialize());
 app.use(passport.session());
 
-// seasons date change? 
+
+
+// seasons date change?
+
+var month = new Array();
+month[0] = "January";
+month[1] = "February";
+month[2] = "March";
+month[3] = "April";
+month[4] = "May";
+month[5] = "June";
+month[6] = "July";
+month[7] = "August";
+month[8] = "September";
+month[9] = "October";
+month[10] = "November";
+month[11] = "December";
+var winter = "11, 12, 0";
+var spring = "2, 3, 4";
+var summer = "5, 6, 7";
+var autumn = "8, 9, 10";
+
+
 app.use((req, res, next ) => {
   
-  // if (newDate(March 20 >= ) ) {
-  //   res.locals.season = "spring";
-  // }
-  // else if (season=== 5 || 6 || 7 ) {
-  //   res.locals.season = "summer";
-  // }
-  // else if (season=== 8 || 9 || 10 ) {
-  //   res.locals.season = "autumn";
-  // }
-  // else if (season=== 11 || 0 || 1 ) {
-  //   res.locals.season = "winter";
-  // }
+  if (new Date() === "2", "3", "4") {
+    res.locals.season = "spring";
+}
+  else if  ( new Date () === "June", "July", "August") {
+    res.locals.season = "summer";
+  }
+  else if (new Date () === "September", "October", "November") {
+    res.locals.season = "autumn";
+  }
+  else if (new Date() === "November", "December", "January") {
+    res.locals.season = "winter";
+  }
   
   next();
 });
