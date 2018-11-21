@@ -56,8 +56,11 @@ app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 // initializes passport like a middleware: 
 app.use(passport.initialize());
 app.use(passport.session());
+
+// seasons date change? 
 app.use((req, res, next ) => {
-  if () {
+  
+  if (newDate(March 20 >= ) ) {
     res.locals.season = "spring";
   }
   else if () {
@@ -72,6 +75,8 @@ app.use((req, res, next ) => {
   
   next();
 });
+
+
 
 // default value for title local
 app.locals.title = 'Cooking safely';
