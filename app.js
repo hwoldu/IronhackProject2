@@ -60,37 +60,21 @@ app.use(passport.session());
 
 // seasons date change?
 
-var month = new Array();
-month[0] = "January";
-month[1] = "February";
-month[2] = "March";
-month[3] = "April";
-month[4] = "May";
-month[5] = "June";
-month[6] = "July";
-month[7] = "August";
-month[8] = "September";
-month[9] = "October";
-month[10] = "November";
-month[11] = "December";
-var winter = "11, 12, 0";
-var spring = "2, 3, 4";
-var summer = "5, 6, 7";
-var autumn = "8, 9, 10";
-
+var date = new Date();
+var month = date.toString().slice(4, 7);
 
 app.use((req, res, next ) => {
   
-  if (new Date() === "2", "3", "4") {
+  if ( month === "Mar" ||  month === "Apr" || month === "May" ) {
     res.locals.season = "spring";
 }
-  else if  ( new Date () === "June", "July", "August") {
+  else if  ( month === "Jun" ||  month === "Jul" ||  month === "Aug") {
     res.locals.season = "summer";
   }
-  else if (new Date () === "September", "October", "November") {
+  else if ( month === "Sep" || month === "Oct" || month === "Nov") {
     res.locals.season = "autumn";
   }
-  else if (new Date() === "November", "December", "January") {
+  else if ( month === "Dec" ||  month === "Jan" || month === "Feb") {
     res.locals.season = "winter";
   }
   
