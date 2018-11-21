@@ -57,16 +57,17 @@ app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use((req, res, next ) => {
-  if () {
+  var season = new Date(month);
+  if (season=== 2 || 3 || 4 ) {
     res.locals.season = "spring";
   }
-  else if () {
+  else if (season=== 5 || 6 || 7 ) {
     res.locals.season = "summer";
   }
-  else if () {
+  else if (season=== 8 || 9 || 10 ) {
     res.locals.season = "autumn";
   }
-  else if () {
+  else if (season=== 11 || 0 || 1 ) {
     res.locals.season = "winter";
   }
   

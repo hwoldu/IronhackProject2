@@ -18,13 +18,8 @@ router.get("/signup", (req, res, next) => {
 });
 
 
-
 router.post("/signup-process", (req, res, next) => {
-<<<<<<< HEAD
   const { fullName, username, email, originalPassword } = req.body;
-=======
-  const { fullName, email, originalPassword } = req.body;
->>>>>>> a893979abb6ed011be26079e5f3b7832aa320183
   if (!originalPassword || originalPassword.match(/[0-9]/) === null) {
     // req.flash("error", "Password can't be blank and must contain a number");
     res.redirect("auth-views/signup-form");
@@ -45,7 +40,7 @@ router.get("/login", (req, res, next) => {
   res.render("auth-views/login-form.hbs");
 });
 
-router.post("/process-login", (req, res, next) => {
+router.post("/login-process", (req, res, next) => {
   const { username, originalPassword } = req.body;
 
   User.findOne({ username: { $eq: username }})
