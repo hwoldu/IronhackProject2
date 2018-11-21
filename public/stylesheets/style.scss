@@ -14,7 +14,8 @@ html {
 }
 
 .winter h2 {
-  color: blue;
+  color: red;
+  font-size: 25px;
 }
 
 .spring h2 {
@@ -27,6 +28,35 @@ html {
 
 .autumn h2 {
   color: orange;
+  font-size: 35px;
+
+}
+
+.winter button {
+  background-color: red;
+  padding: 25px 180px;
+  border-radius: 10px;
+}
+
+.spring button {
+  background-color: green;
+  padding: 25px 180px;
+  border-radius: 10px;
+}
+
+.summer button {
+  background-color: yellow;
+  padding: 25px 180px;
+  border-radius: 10px;
+}
+
+.autumn button {
+  background-color: orange;
+  padding: 25px 180px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-family: 'Work Sans', sans-serif;
+
 }
 
 
@@ -39,7 +69,6 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  
 }
 
 
@@ -82,4 +111,23 @@ header {
 .list-recipes a {
   display: flex;
   text-decoration: none;
+}
+
+.home {
+  padding-left: 1%;
+  margin: 7%;
+}
+
+.intro p {
+  padding-right: 50%;
+}
+
+.produce img {
+  weight: 150px;
+  height: 150px;
+}
+
+.produce {
+  display: flex;
+  justify-content: space-around;
 }

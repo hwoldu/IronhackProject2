@@ -84,7 +84,7 @@ app.use((req, res, next ) => {
 
 
 // default value for title local
-app.locals.title = 'Cooking safely';
+app.locals.title = '';
 
 
 const index = require('./routes/index');
