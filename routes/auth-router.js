@@ -7,7 +7,7 @@ const router = express.Router();
 // const { sendSignupMail } = require("../config/nodemailer-setup.js");
 
 // to encrypt passwords
-const bcrptySalt = 10;
+// const bcrptySalt = 10;
 
 router.get("/meal-plan", (req, res, next) => {
   res.render("recipe-views/meal-plan.hbs");
@@ -54,19 +54,14 @@ router.post("/signup-process", (req, res, next) => {
 
 
 
-
-
-
-
-
-
-
-
-
-
 router.get("/login", (req, res, next) => {
   res.render("auth-views/login-form.hbs");
 });
+
+router.get("/add-recipe", (req, res, next) => {
+  res.render("auth-views/recipe-form.hbs");
+});
+
 
 router.post("/login-process", (req, res, next) => {
   const { username, originalPassword } = req.body;
@@ -98,12 +93,6 @@ router.post("/login-process", (req, res, next) => {
 });
 
 
-
-router.get("/add-recipe", (req, res, next) => {
-  res.render("auth-views/recipe-form.hbs");
-});
-
-
 router.post("/process-recipe", (req, res, next) => {
   const { title, image, level, duration, ingredients, description } = req.body;
   
@@ -118,15 +107,11 @@ router.post("/process-recipe", (req, res, next) => {
 
 
 
-
-
-
 router.get("/logout", (req, res, next) => {
   req.logout();
   // req.flash("success", "Logged out successfully! 🏋🏻‍");
   res.redirect("/");
 });
-
 
 
 module.exports = router;
