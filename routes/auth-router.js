@@ -7,7 +7,7 @@ const router = express.Router();
 // const { sendSignupMail } = require("../config/nodemailer-setup.js");
 
 // to encrypt passwords
-// const bcrptySalt = 10;
+const bcrptySalt = 10;
 
 router.get("/meal-plan", (req, res, next) => {
   res.render("recipe-views/meal-plan.hbs");
@@ -32,7 +32,7 @@ router.post("/signup-process", (req, res, next) => {
   User.create({fullName, username, email, encryptedPassword })
     .then(userDoc => {
       // req.flash("success", "Signup success 🤸🏾‍")
-      res.redirect("/");
+      res.redirect("/login");
 
     })
     .catch(err => next(err));
@@ -58,9 +58,7 @@ router.get("/login", (req, res, next) => {
   res.render("auth-views/login-form.hbs");
 });
 
-router.get("/add-recipe", (req, res, next) => {
-  res.render("auth-views/recipe-form.hbs");
-});
+
 
 
 router.post("/login-process", (req, res, next) => {
@@ -84,7 +82,7 @@ router.post("/login-process", (req, res, next) => {
       else {
         req.logIn(userDoc, () => {
           // req.flash("success", "Log in success! 🤜✨🤛 ")
-          res.redirect("/add-recipe");
+          res.redirect("/recipe/add");
 
         });
       }
@@ -93,17 +91,6 @@ router.post("/login-process", (req, res, next) => {
 });
 
 
-router.post("/process-recipe", (req, res, next) => {
-  const { title, image, level, duration, ingredients, description } = req.body;
-  
-  Recipe.create({ title, image, level, duration, ingredients, description  })
-    .then(recipeDoc => {
-      // req.flash("success", "Recipe created success 🤸🏾‍")
-      res.redirect("/process-recipe");
-
-    })
-    .catch(err => next(err));
-});
 
 
 
