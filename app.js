@@ -9,9 +9,9 @@ const mongoose     = require('mongoose');
 const logger       = require('morgan');
 const path         = require('path');
 const flash        = require('connect-flash');
-// const MongoStore   = require("connect-mongo")(session);
-const passport     = require("passport");
 const session      = require("express-session");
+const MongoStore   = require("connect-mongo")(session);
+const passport     = require("passport");
 
 
 //super important & runs code inside 'passport-setup.js'
@@ -51,6 +51,18 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
+
+app.use(session({
+  // "resave" & saveUninitialized are just here to avoid warning messages
+  resave: true,
+  saveUninitialized: true,
+
+  // "secret" should be a string that is different for every app
+  secret: process.env.session_secret,
+
+  store: new MongoStore({ mongooseConnection: mongoose.connection }),
+
+}));
 
 // initializes passport like a middleware: 
 app.use(passport.initialize());
