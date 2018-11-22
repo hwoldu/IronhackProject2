@@ -58,7 +58,7 @@ app.use(passport.session());
 
 
 
-// seasons date change?
+// seasons date change
 
 var date = new Date();
 var month = date.toString().slice(4, 7);
