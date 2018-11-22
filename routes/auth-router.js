@@ -23,7 +23,11 @@ router.post("/signup-process", (req, res, next) => {
   const { fullName, username, email, password } = req.body;
   if (!password || password.match(/[0-9]/) === null) {
     // req.flash("error", "Password can't be blank and must contain a number");
+<<<<<<< HEAD
     res.redirect("/login");
+=======
+    res.render("auth-views/signup-form.hbs");
+>>>>>>> dbe020f8438d97c97957bf446737dd6da03ff798
     return;
   }
   const encryptedPassword = bcrypt.hashSync(password, 10);
