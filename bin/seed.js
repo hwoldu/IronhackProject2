@@ -95,67 +95,67 @@ mongoose
 {
   name: "Apples",
   image: "./public/images/autumn/apples.jpeg",
-  season: "Autumn",
+  season: "autumn",
 },
 {
   name: "Apples",
   image: "./public/images/autumn/apples.jpeg",
-  season: "Autumn",
+  season: "autumn",
 },
 {
   name: "Butternut",
   image: "./public/images/autumn/butternut.jpeg",
-  season: "Autumn",
+  season: "autumn",
 },
 {
   name: "Cabbage",
   image: "./public/images/autumn/cabbage.jpeg",
-  season: "Autumn",
+  season: "autumn",
 },
 {
   name: "Cauliflower",
   image: "./public/images/autumn/cauliflower.jpeg",
-  season: "Autumn",
+  season: "autumn",
 },
 {
   name: "Chestnut",
   image: "./public/images/autumn/chestnut.jpeg",
-  season: "Autumn",
+  season: "autumn",
 },
 {
   name: "Grapes",
   image: "./public/images/autumn/grapes.jpeg",
-  season: "Autumn",
+  season: "autumn",
 },
 {
   name: "Leeks",
   image: "./public/images/autumn/leeks.jpeg",
-  season: "Autumn",
+  season: "autumn",
 },
 {
   name: "Parships",
   image: "./public/images/autumn/parships.jpeg",
-  season: "Autumn",
+  season: "autumn",
 },
 {
   name: "Pears",
   image: "./public/images/autumn/pears.jpeg",
-  season: "Autumn",
+  season: "autumn",
 },
 {
   name: "Pumpkins",
   image: "./public/images/autumn/pumpkins.jpeg",
-  season: "Autumn",
+  season: "autumn",
 },
 {
   name: "Quince",
   image: "./public/images/autumn/quince.jpeg",
-  season: "Autumn",
+  season: "autumn",
 },
 {
   name: "Walnuts",
   image: "./public/images/autumn/walnuts.jpeg",
-  season: "Autumn",
+  season: "autumn",
 }
   ]
 
