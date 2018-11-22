@@ -152,7 +152,47 @@ mongoose
   season: "Autumn",
 },
 {
-  name: "Walnuts",
-  image: "./public/images/autumn/walnuts.jpeg"
-  season: "Autumn",
+  name: "Apricots",
+  image: "./public/images/autumn/apricots.jpeg"
+  season: "Spring",
+},
+{
+  name: "Artichoke",
+  image: "./public/images/autumn/artichoke.jpeg"
+  season: "Artichoke",
+},
+{
+  name: "Corn",
+  image: "./public/images/autumn/corn.jpeg"
+  season: "Spring",
+},
+{
+  name: "Cucumber",
+  image: "./public/images/autumn/cucumber.jpeg"
+  season: "Spring",
+},
+{
+  name: "Mushrooms",
+  image: "./public/images/autumn/mushrooms.jpeg"
+  season: "Spring",
+},
+{
+  name: "Peas",
+  image: "./public/images/autumn/peas.jpeg"
+  season: "Spring",
+},
+{
+  name: "Rhubarbe",
+  image: "./public/images/autumn/rhubarbe.jpeg"
+  season: "Spring",
+},
+{
+  name: "Spinach",
+  image: "./public/images/autumn/spinach.jpeg"
+  season: "Spring",
+},
+{
+  name: "Strawberry",
+  image: "./public/images/autumn/strawberry.jpeg"
+  season: "Spring",
 },
