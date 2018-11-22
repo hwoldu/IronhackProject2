@@ -7,7 +7,7 @@ const router = express.Router();
 // const { sendSignupMail } = require("../config/nodemailer-setup.js");
 
 // to encrypt passwords
-const bcrptySalt = 10;
+// const bcrptySalt = 10;
 
 router.get("/meal-plan", (req, res, next) => {
   res.render("recipe-views/meal-plan.hbs");
