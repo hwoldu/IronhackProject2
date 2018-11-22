@@ -23,7 +23,7 @@ router.post("/signup-process", (req, res, next) => {
   const { fullName, username, email, password } = req.body;
   if (!password || password.match(/[0-9]/) === null) {
     // req.flash("error", "Password can't be blank and must contain a number");
-    res.render("auth-views/signup-form.hbs");
+    res.redirect("/login");
     return;
   }
   const encryptedPassword = bcrypt.hashSync(password, 10);
@@ -78,6 +78,7 @@ router.post("/login-process", (req, res, next) => {
       if (!bcrypt.compareSync(password, encryptedPassword)) {
         // req.flash("error", "Incorrect password. 🤕");
         res.redirect("/login");
+        return;
       }
       else {
         req.logIn(userDoc, () => {
