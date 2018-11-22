@@ -160,3 +160,13 @@ mongoose
   ]
 
 
+produce.create(produceDate)
+  .then(produceResults => {
+      console.log(`inserted ${produceResult.length} wohoo produce!`);
+  })
+    .catch(err => {
+      console.log("created failure", err);
+    });
+
+    const mongoose = require("mongoose");
+    const produce = require("../models/produce-list.js");
