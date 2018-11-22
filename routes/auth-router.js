@@ -20,13 +20,13 @@ router.get("/signup", (req, res, next) => {
 
 
 router.post("/signup-process", (req, res, next) => {
-  const { fullName, username, email, originalPassword } = req.body;
-  if (!originalPassword || originalPassword.match(/[0-9]/) === null) {
+  const { fullName, username, email, password } = req.body;
+  if (!password || password.match(/[0-9]/) === null) {
     // req.flash("error", "Password can't be blank and must contain a number");
-    res.redirect("auth-views/signup-form");
+    res.redirect("/login");
     return;
   }
-  const encryptedPassword = bcrypt.hashSync(originalPassword, 10);
+  const encryptedPassword = bcrypt.hashSync(password, 10);
 
   
   User.create({fullName, username, email, encryptedPassword })
@@ -62,7 +62,8 @@ router.get("/login", (req, res, next) => {
 
 
 router.post("/login-process", (req, res, next) => {
-  const { username, originalPassword } = req.body;
+  console.log(req.body);
+  const { username, password } = req.body;
 
   User.findOne({ username: { $eq: username }})
     .then(userDoc => {
@@ -75,14 +76,18 @@ router.post("/login-process", (req, res, next) => {
 
       // check the password
       const { encryptedPassword } = userDoc;
-      if (!bcrypt.compareSync(originalPassword, encryptedPassword)) {
+      console.log(password);
+      console.log(encryptedPassword);
+
+      if (!bcrypt.compareSync(password, encryptedPassword)) {
         // req.flash("error", "Incorrect password. 🤕");
         res.redirect("/login");
+        return;
       }
       else {
         req.logIn(userDoc, () => {
           // req.flash("success", "Log in success! 🤜✨🤛 ")
-          res.redirect("/recipe/add");
+          res.render("recipe-views/recipe-form.hbs");
 
         });
       }
