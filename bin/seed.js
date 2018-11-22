@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const produce = require("../models/produce-list.js");
+const Produce = require("../models/produce-list.js");
 
 mongoose
   .connect(process.env.MONGODB_URI, {useNewUrlParser: true})
@@ -160,13 +160,11 @@ mongoose
   ]
 
 
-produce.create(produceDate)
+Produce.create(produce)
   .then(produceResults => {
-      console.log(`inserted ${produceResult.length} wohoo produce!`);
+      console.log(`inserted ${produceResults.length} wohoo produce!`);
   })
     .catch(err => {
       console.log("created failure", err);
     });
 
-    const mongoose = require("mongoose");
-    const produce = require("../models/produce-list.js");

@@ -48,6 +48,18 @@ router.post("/process-settings", (req, res, next) => {
 });
 
 
+router.get('/index', (req, res, next) => {
+  produce.find()
+  .then(myResponse => {
+    res.locals.produceArray = myResponse;
+    res.render('index.hbs')
+  })
+  .catch()
+});
+
+
+
+
 
 module.exports = router;
 

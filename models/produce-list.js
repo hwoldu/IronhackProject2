@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-
 const produceSchema = Schema({
   name: { type: String },
   image: { type: String },
@@ -13,5 +12,6 @@ const produceSchema = Schema({
 });
 
 
-const produce = mongoose.model("produce", produceSchema);
-module.exports = produce;
+
+const Produce = mongoose.model("Produce", produceSchema);
+module.exports = Produce;
