@@ -3,6 +3,8 @@ const bcrypt = require("bcrypt");
 const passport = require("passport");
 const User = require("../models/user-model.js");
 const router = express.Router();
+// this const from the Express lesson. Uncomment if want to use 🦄:
+// const { sendSignupMail } = require("../config/nodemailer-setup.js");
 
 // to encrypt passwords
 const bcrptySalt = 10;
@@ -26,6 +28,7 @@ router.post("/signup-process", (req, res, next) => {
   }
   const encryptedPassword = bcrypt.hashSync(originalPassword, 10);
 
+  
   User.create({fullName, username, email, encryptedPassword })
     .then(userDoc => {
       // req.flash("success", "Signup success 🤸🏾‍")
@@ -34,6 +37,32 @@ router.post("/signup-process", (req, res, next) => {
     })
     .catch(err => next(err));
 });
+
+// 📨 CODE FOR EXPRESS USERS EMAIL OPTION. REPLACE ABOVE CODE IF YOU WANT TO USE   📪 
+// User.create({fullName, username, email, encryptedPassword })
+//     .then(userDoc => {
+//       // EXPRESS USERS EMAIL OPTION 
+//       sendSignupMail(userDoc) 
+//       .then(() => { 
+//       req.flash("success!, signup!);
+//       res.redirect("/");
+//     })
+//     .catch(err => next(err));
+//   })
+//     .catch(err => next(err));
+// });
+
+
+
+
+
+
+
+
+
+
+
+
 
 router.get("/login", (req, res, next) => {
   res.render("auth-views/login-form.hbs");
