@@ -1,0 +1,16 @@
+img1 : apples
+img2 : butternut
+img3 : cabbage
+img4 : carrots
+img5 : cauliflower
+img6 : chestnut
+img7 : grapes
+img8 : leeks
+img9 : parsnips
+img10 : pears
+img11 : pumpkin
+img12 : quince
+img13 : walnut
+img1
+img1
+img1
