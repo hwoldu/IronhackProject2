@@ -11,7 +11,7 @@ mongoose
   });
 
 
-  const produce = [
+  const Produce = [
 { name: "Beetroot",
   image: "./public/images/winter/beet.jpeg",
   season: "winter"
