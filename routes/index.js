@@ -2,18 +2,17 @@ const express = require('express');
 const User = require("../models/user-model.js");
 const router  = express.Router();
 const fileUploader = require("../config/file-upload.js");
+const Produces = require("../models/produce-list.js");
 
 
 /* GET home page */
 router.get('/', (req, res, next) => {
-  if (req.user) {
-    console.log("Logged in! 🥙", req.user);
-  }
-  else {
-    console.log("Not logged in! 🍎", req.user);
-  }
-  res.locals.currentUser = req.user;
-  res.render('index');
+  Produces.find( { season: {$eq: res.locals.season} } )
+    .then(arrayDoc => {
+      res.locals.produces = arrayDoc;
+      res.render("index.hbs");
+    })
+    .catch(err => next(err));
 });
 
 router.get("/settings", (req, res, next) => {

@@ -124,12 +124,14 @@ header {
 }
 
 .produces img {
-  width: 150px;
-  height: 150px;
+  width: 250px;
+  height: 250px;
+
   
 }
 
 .produces {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
