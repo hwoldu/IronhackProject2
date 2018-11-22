@@ -46,10 +46,11 @@ router.post("/process-settings", (req, res, next) => {
     .catch(err => next(err));
 });
 
-
-router.get('/index', (req, res, next) => {
+// router for produces: veggies and fruits 
+router.get('/', (req, res, next) => {
   produce.find()
   .then(myResponse => {
+    //res.send(myResponse)
     res.locals.produceArray = myResponse;
     res.render('index.hbs')
   })
