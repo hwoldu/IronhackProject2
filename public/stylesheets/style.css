@@ -11,36 +11,36 @@ html {
   margin: 0; }
 
 .winter h2 {
-  color: red;
+  color: #990000;
   font-size: 25px; }
 
 .spring h2 {
-  color: green; }
+  color: #15A071; }
 
 .summer h2 {
-  color: yellow; }
+  color: #F172A1; }
 
 .autumn h2 {
-  color: orange;
+  color: #FFAE19;
   font-size: 35px; }
 
 .winter button {
-  background-color: red;
+  background-color: #990000;
   padding: 25px 180px;
   border-radius: 10px; }
 
 .spring button {
-  background-color: green;
+  background-color: #15A071;
   padding: 25px 180px;
   border-radius: 10px; }
 
 .summer button {
-  background-color: yellow;
+  background-color: #F172A1;
   padding: 25px 180px;
   border-radius: 10px; }
 
 .autumn button {
-  background-color: orange;
+  background-color: #FFAE19;
   padding: 25px 180px;
   border-radius: 10px;
   font-size: 15px;
@@ -96,11 +96,11 @@ header {
 .intro p {
   padding-right: 50%; }
 
-.produce img {
-  weight: 150px;
+.produces img {
+  width: 150px;
   height: 150px; }
 
-.produce {
+.produces {
   display: flex;
   justify-content: space-around; }
 
