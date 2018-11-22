@@ -14,9 +14,11 @@
 
   <section class="produces">
     
-    {{#each produce}}
+    {{#each produceArray}}
     <div>
-      
+      <h1>{{this.name}}</h1>
+     <img src="{{this.image}}" alt="">
+      <p>{{this.season}}</p>
     </div>
 
 
