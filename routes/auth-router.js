@@ -23,7 +23,7 @@ router.post("/signup-process", (req, res, next) => {
   const { fullName, username, email, originalPassword } = req.body;
   if (!originalPassword || originalPassword.match(/[0-9]/) === null) {
     // req.flash("error", "Password can't be blank and must contain a number");
-    res.redirect("auth-views/signup-form");
+    res.render("auth-views/signup-form.hbs");
     return;
   }
   const encryptedPassword = bcrypt.hashSync(originalPassword, 10);
@@ -82,7 +82,7 @@ router.post("/login-process", (req, res, next) => {
       else {
         req.logIn(userDoc, () => {
           // req.flash("success", "Log in success! 🤜✨🤛 ")
-          res.redirect("/recipe/add");
+          res.render("recipe-views/recipe-form.hbs");
 
         });
       }
