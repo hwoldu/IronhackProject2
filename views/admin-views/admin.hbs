@@ -1,0 +1,16 @@
+<h2>Admin page</h2>
+
+<p>There is {{}} recipes to accept</p>
+
+
+<ul>
+  {{#each recipeArray}}
+  <h4>{{this.title}}</h4>
+  <ul>
+    <li>{{this.image}}</li>
+    <li>Level:{{this.level}}</li>
+    <li>Duration: {{this.duration}}</li>
+    <li>Ingredients: {{this.ingredients}}</li>
+  </ul>
+  {{/each}}
+</ul>

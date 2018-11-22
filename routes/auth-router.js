@@ -5,8 +5,7 @@ const User = require("../models/user-model.js");
 const router = express.Router();
 
 // to encrypt passwords
-// const bcrypt = require("bcrypt");
-// const bcrptySalt = 10;
+const bcrptySalt = 10;
 
 router.get("/meal-plan", (req, res, next) => {
   res.render("recipe-views/meal-plan.hbs");
@@ -61,13 +60,36 @@ router.post("/login-process", (req, res, next) => {
       else {
         req.logIn(userDoc, () => {
           // req.flash("success", "Log in success! 🤜✨🤛 ")
-          res.redirect("/");
+          res.redirect("/add-recipe");
 
         });
       }
     })
     .catch(err => next(err));
 });
+
+
+
+router.get("/add-recipe", (req, res, next) => {
+  res.render("auth-views/recipe-form.hbs");
+});
+
+
+router.post("/process-recipe", (req, res, next) => {
+  const { title, image, level, duration, ingredients, description } = req.body;
+  
+  Recipe.create({ title, image, level, duration, ingredients, description  })
+    .then(recipeDoc => {
+      // req.flash("success", "Recipe created success 🤸🏾‍")
+      res.redirect("/process-recipe");
+
+    })
+    .catch(err => next(err));
+});
+
+
+
+
 
 
 router.get("/logout", (req, res, next) => {

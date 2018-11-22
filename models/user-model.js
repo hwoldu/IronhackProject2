@@ -2,27 +2,27 @@ const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-const userSchema = new Schema ({
+const userSchema = new Schema({
 
   fullName: { type: String, required: true },
-  email: { type: String, required: true, unique: true ,
-    match: /^.+@.+\..+$/, }, 
-  encryptedPassword: { type: String, },
-  role: { 
-    type: String, 
-    enum: [ "normal", "admin" ],
-    required: true, 
-    default: "normal",
-    avatar: {
-      type: String,
-    },
-
+  username: { type: String, required: true },
+  email: {
+    type: String, required: true, unique: true,
+    match: /^.+@.+\..+$/,
   },
-
+  encryptedPassword: { type: String, },
+  role: {
+    type: String,
+    enum: ["normal", "admin"],
+    required: true,
+    default: "normal",
+    avatar: { type: String },
+  },
+  
 }, {
-  timestamps: { createdAt: "created_At", updatedAt: "updated_At" }
+    timestamps: { createdAt: "created_At", updatedAt: "updated_At" }
 
-}); 
+  });
 
 
 
@@ -31,9 +31,9 @@ const userSchema = new Schema ({
 // (we use this to get around the limits on if conditions in HBS files)
 
 // 🚨 will use this later maybe? 11/20/18 -hw 
-// userSchema.virtual("isAdmin").get(function () { 
-//   return this.role === "admin";
-// });
+userSchema.virtual("isAdmin").get(function () {
+  return this.role === "admin";
+});
 
 const User = mongoose.model("User", userSchema);
 

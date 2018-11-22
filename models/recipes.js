@@ -6,14 +6,23 @@ const recipeSchema = new Schema({
 
   title: { type: String, required: true },
   image: { type: String },
-  level: { type: String },
+  level: { 
+    type: String,
+    enum: ["easy", "medium", "difficult"],
+    required:true,
+   },
   duration: {
     type: Number,
     min: 0,
   },
-  ingredients: {type: Array}, 
-
+  ingredients: {type: [String]},
+  description: {type: String},
+  verified: {
+    type: Boolean,
+    default: false,
+    required: true,
+  }
 });
 
-const Recipe = mongoose.model("Recipe", recipeSchema);
-module.exports = Recipe;
+const recipe = mongoose.model("Recipe", recipeSchema);
+module.exports = recipe;

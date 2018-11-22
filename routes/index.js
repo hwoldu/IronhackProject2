@@ -48,14 +48,6 @@ router.post("/process-settings", (req, res, next) => {
 });
 
 
-router.get("/produce", (req, res, next) => {
-  Produce.find()
-    .then(myResponse => {
-      res.locals.produce = myResponse;
-      res.render("../bin/seed.js");
-    })
-    .catch(err => next(err))
-});
 
 module.exports = router;
 
