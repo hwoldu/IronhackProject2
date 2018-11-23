@@ -2,7 +2,7 @@ const express = require('express');
 const User = require("../models/user-model.js");
 const router  = express.Router();
 const fileUploader = require("../config/file-upload.js");
-const Produces = require("../models/produce-list.js");
+const Produces = require("../models/produceSchema.js");
 
 
 /* GET home page */
@@ -46,16 +46,6 @@ router.post("/process-settings", (req, res, next) => {
     .catch(err => next(err));
 });
 
-// router for produces: veggies and fruits 
-router.get('/', (req, res, next) => {
-  produce.find()
-  .then(myResponse => {
-    //res.send(myResponse)
-    res.locals.produceArray = myResponse;
-    res.render('index.hbs')
-  })
-  .catch()
-});
 
 
 
