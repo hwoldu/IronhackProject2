@@ -1,17 +1,13 @@
-<h2>Recipes</h2>
+<h3>Recipes</h3>
+<section class="recipes">
 
- <section class="recipe"> 
 {{#each recipeSchema}}
-    <div> 
+<div>
       <h2>{{this.title}}</h2>
-
+      <img src="{{this.image}}" alt=""></a>
       <p>{{this.level}}</p>
+      <p>{{this.duration}}minutes</p>
       <p>{{this.ingredients}}</p>
-      <img src="{{this.image}}" alt="">
-      <p>{{this.duration}}</p>
-    </div>
- {{/each}}
-
-  </section>
-
-
+</div>
+{{/each}}
+</section>
