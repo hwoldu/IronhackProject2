@@ -8,7 +8,15 @@ const produceSchema = new Schema({
     type: String,
     enum: ["winter", "summer", "spring", "autumn"],
     required: true,
+  },
+    verified: {
+    type: Boolean,
+    default: false,
+    required: true,
   }
+
+
+
 });
 
 

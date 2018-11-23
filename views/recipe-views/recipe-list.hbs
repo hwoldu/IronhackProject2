@@ -1,11 +1,25 @@
-<h2>All the {{season}} recipes</h2>
+<h2>Recipes</h2>
 
-<div class="list-recipes">
-  <a href="#0"><img src="./images/{{season}}/recipes/img1.jpg" alt="">Butternut squash & sage risotto</a>
-  <a href="#0"><img src="./images/{{season}}/recipes/img2.jpg" alt="">Sweet potato & butternut squash soup with garlic toast</a>
-  <a href="#0"><img src="./images/{{season}}/recipes/img3.jpg" alt="">Apple, pear & walnut crumble</a>
-  <a href="#0"><img src="./images/{{season}}/recipes/img4.jpg" alt="">Leek & potato soup</a>
-  <a href="#0"><img src="./images/{{season}}/recipes/img5.jpg" alt="">Parsnip pilaf</a>
-  <a href="#0"><img src="./images/{{season}}/recipes/img6.jpg" alt="">Vegan pumpkin pie</a>
-</div>
+ <section class="recipe"> 
+{{#each recipeSchema}}
+    <div> 
+      <h2>{{this.title}}</h2>
 
+      <p>{{this.level}}</p>
+      <p>{{this.ingredients}}</p>
+      <img src="{{this.image}}" alt="">
+      <p>{{this.duration}}</p>
+    </div>
+ {{/each}}
+
+  </section>
+
+
+
+
+
+
+
+<ul>
+  
+</ul>
