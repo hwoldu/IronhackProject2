@@ -131,7 +131,7 @@ const produce = [
     season: "autumn",
   },
   {
-    name: "Parships",
+    name: "Parsnips",
     image: "/images/autumn/parsnips.jpeg",
     season: "autumn",
   },
