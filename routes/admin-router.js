@@ -4,7 +4,6 @@ const router = express.Router();
 const User = require("../models/user-model.js");
 
 router.get("/admin/users", (req, res, next) => {
-  console.log('*********************************', req.user);
   if (!req.user || req.user.role !== "admin"){
     // req.flash("error", "Only admins can do that. 🏄🏻‍");
     res.redirect("/");
@@ -14,7 +13,7 @@ router.get("/admin/users", (req, res, next) => {
     .sort( { role: 1, createdAt: 1 } )
     .then(userResults => {
       res.locals.userArray = userResults;
-      res.render("admin-views/user-list.hbs");
+      res.render("admin-views/admin-page.hbs");
     })
     .catch(err => next(err));
 });

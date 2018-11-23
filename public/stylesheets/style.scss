@@ -124,8 +124,8 @@ header {
 }
 
 .produces img {
-  width: 250px;
-  height: 250px;
+  width: auto;
+  max-height: 250px;
 
 }
 
@@ -134,3 +134,4 @@ header {
   justify-content: space-around;
   flex-wrap: wrap;
 }
+
