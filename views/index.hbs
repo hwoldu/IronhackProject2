@@ -11,17 +11,16 @@
       Sed rhoncus convallis felis ultrices mollis amet.
     </p>
   </section>
-
-  <section class="produces">
-    
-    {{#each produces}}
-    <div>
+  <section class="produces"> 
+{{#each produces}}
+    <div> 
+      <h2>{{this.name}}</h2>
       <img src="{{this.image}}" alt="" />
     </div>
-    {{/each}}
+   
+ {{/each}}
 
   </section>
-
 
   <a href="/recipe-list"> <button class="all-recipes">All The Recipes!</button></a>
 

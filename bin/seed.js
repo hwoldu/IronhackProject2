@@ -155,7 +155,7 @@ const produce = [
     image: "/images/autumn/walnuts.jpeg",
     season: "autumn",
   }
-]
+] 
 
 
 Produce.create(produce)
