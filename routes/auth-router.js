@@ -84,7 +84,7 @@ router.post("/login-process", (req, res, next) => {
         req.logIn(userDoc, () => {
           // req.flash("success", "Log in success! 🤜✨🤛 ")
           // res.render("recipe-views/recipe-form.hbs");
-          res.redirect('/admin/users')
+          res.redirect('/admin/recipes')
 
         });
       }

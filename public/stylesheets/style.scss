@@ -16,20 +16,25 @@ html {
 .winter h2 {
   color:#990000;
   font-size: 25px;
+  padding-left: 1%;
+  margin: 5%;
 }
 
 .spring h2 {
   color:#15A071;
+  padding-left: 1%;
+  margin: 5%;
 }
 
 .summer h2 {
   color: #F172A1;
+  padding-left: 1%;
+  margin: 5%;
 }
 
 .autumn h2 {
   color: #FFAE19;
   font-size: 35px;
-
 }
 
 .winter button {
@@ -135,3 +140,18 @@ header {
   flex-wrap: wrap;
 }
 
+.active {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.inactive {
+  display: none;
+}
+
+.main-menu {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+}

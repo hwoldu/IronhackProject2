@@ -1,16 +1,19 @@
 <h2>Admin page</h2>
 
-<p>There is recipes to accept</p>
+<p>There is {{recipeVerifNumber}} recipe(s) to accept</p>
 
 
 <ul>
   {{#each recipeArray}}
   <h4>{{this.title}}</h4>
   <ul>
-    <li>{{this.image}}</li>
-    <li>Level:{{this.level}}</li>
+    <li>Image: {{this.image}}</li>
+    <li>Level: {{this.level}}</li>
     <li>Duration: {{this.duration}}</li>
-    <li>Ingredients: {{this.ingredients}}</li>
-  </ul>
+    <li> Ingredients: {{this.ingredients}}</li> 
+   
+   
+
+  <button>Validate the recipe</button>
   {{/each}}
 </ul>
