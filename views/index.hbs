@@ -8,17 +8,16 @@
       Feel better, eat better.
     </p>
   </section>
-
-  <section class="produces">
-    
-    {{#each produces}}
-    <div class="img-intro">
+  <section class="produces"> 
+{{#each produces}}
+    <div> 
+      <h2>{{this.name}}</h2>
       <img src="{{this.image}}" alt="" />
     </div>
-    {{/each}}
+   
+ {{/each}}
 
   </section>
-
 
   <a href="/recipe-list"> <button class="all-recipes">All The Recipes!</button></a>
 
