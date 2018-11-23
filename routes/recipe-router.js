@@ -5,7 +5,7 @@ const recipeList = require("../models/recipeSchema.js");
 
 
 // router for recipe schema 🍝
-router.get('/recipe-List', (req, res, next) => {
+router.get('/recipe-list', (req, res, next) => {
   recipeList.find( { season: {$eq: res.locals.season} } )
     .then(arrayDocs => {
       res.locals.recipeSchema = arrayDocs;

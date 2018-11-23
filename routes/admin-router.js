@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-const Recipe = require("../models/recipes.js");
+const Recipe = require("../models/recipeSchema.js");
 
 router.get("/admin/recipes", (req, res, next) => {
   if (!req.user || req.user.role !== "admin"){

@@ -23,7 +23,8 @@ const recipeSchema = new Schema({
     enum: ["winter", "summer", "spring", "autumn"],
     required: true
   },
-    verified: {
+  link: { type: String },
+  verified: {
     type: Boolean,
     default: false,
     required: true,

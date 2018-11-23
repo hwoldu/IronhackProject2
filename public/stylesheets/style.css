@@ -124,4 +124,15 @@ header {
   display: flex;
   justify-content: space-around; }
 
+.recipes img {
+  width: auto;
+  max-height: 250px;
+  flex-direction: row; }
+
+.recipes {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: column; }
+
 /*# sourceMappingURL=style.css.map */

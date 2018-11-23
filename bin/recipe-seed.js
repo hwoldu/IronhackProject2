@@ -172,7 +172,7 @@ const recipeSchema = [
     ],
     "dishType": "starter",
     "description": "Heat oven to 220C/200C fan/gas 7. Put the sweet potato and butternut squash on a baking tray and add the honey and a drizzle of olive oil. Roast for 40-45 mins until soft and starting to caramelise at the edges, stirring occasionally.  Meanwhile, fry the onions in 1 tbsp olive oil until soft, then add the garlic, chicken stock, cinnamon and nutmeg. Bring to the boil, and simmer for 5 mins.  Remove the sweet potatoes and butternut squash from the oven and add to the pan with the stock. Blend everything until smooth using a stick blender. Stir in most of the cream and bring back to a gentle simmer, and season with salt and pepper to taste.  To make the lemon & garlic toasts, gently warm the olive oil and garlic in a pan over a low heat for a few mins; the garlic should be softened but not browned. Remove from the heat and mix in the butter and lemon zest until smooth. Leave to cool, then stir in the chives and thyme.  Toast the ciabatta slices, and top each with a spoonful of garlic butter. Serve with the soup, drizzled with the remaining cream, and some black pepper.",
-    "image": "./images/winter/recipes/butternut-squash-soup.jpg",
+    "image": "/images/winter/recipes/butternut-squash-soup.jpg",
     "duration": 90,
     "season": "winter"
   },
@@ -195,7 +195,7 @@ const recipeSchema = [
     ],
     "dishType": "main dish",
     "description": "Heat oven to 160C/140C fan/gas 3 and put the kettle on.  Put 2 thickly sliced celery sticks, 1 chopped onion, 2 chunkily sliced carrots, 5 bay leaves and 1 whole thyme sprig in a flameproof casserole dish with 1 tbsp vegetable oil and 1 tbsp butter.  Soften for 10 mins, then stir in 2 tbsp plain flour until it doesn’t look dusty anymore, followed by 2 tbsp tomato purée, 2 tbsp Worcestershire sauce and 2 crumbled beef stock cubes.  Gradually stir in 600ml hot water, then tip in 850g stewing beef and bring to a gentle simmer.  Cover and put in the oven for 2hrs 30 mins, then uncover and cook for 30mins – 1hr more until the meat is really tender and the sauce is thickened.  Garnish with the picked leaves of the remaining thyme sprig.",
-    "image": "./images/winter/recipes/beef-casserole.jpg",
+    "image": "/images/winter/recipes/beef-casserole.jpg",
     "duration": 240,
     "season": "winter"
   },
@@ -215,7 +215,7 @@ const recipeSchema = [
     ],
     "dishType": "starter",
     "description": "Melt 50g butter in a heavy saucepan. When it foams, add 450g potatoes, cut into 1cm cubes, 1 small onion, cut the same as the potatoes, and 450g white parts of leeks, sliced and toss them in the butter until they are well coated.  Season well with salt and freshly ground pepper and toss again. Put a disc of greaseproof paper (called a cartouche by chefs) on top of the vegetables to keep in the steam), then cover the pan with its lid.  Cook over a gentle heat for 10 mins, or until the vegetables are soft but not coloured.  Uncover the pan and discard the paper. Pour in 850ml of the light chicken or vegetable stock, bring to the boil and simmer until the vegetables are just cooked – about 5 minutes. Do not overcook or the soup will lose its fresh flavour.  Purée in a blender until silky smooth, in batches if necessary, then taste and adjust the seasoning. Return the soup to a clean pan and stir in three quarters of a 142ml carton of whipping cream and 125ml full-fat milk.  To finish the soup, finely shred the white part of 1 leek and gently cook it in a small knob of hot butter for a few mins until it is softened but not coloured.  Reheat the soup to a gentle simmer (add some extra stock at this point if the soup is too thick for your liking), then pour into warmed bowls.  Drizzle the remaining cream over each serving, top with a little pile of buttered leeks and a scattering of chives and black pepper and serve at once.",
-    "image": "./images/winter/recipes/leek-potatoe-soup.jpg",
+    "image": "/images/winter/recipes/leek-potatoe-soup.jpg",
     "duration": 45,
     "season": "winter"
   },
@@ -329,10 +329,84 @@ const recipeSchema = [
     ],
     "dishType": "main dish",
     "description": "Before you make the risotto, heat oven to 220C/fan 200C/gas 7. Toss the squash in 1 tbsp oil together with the chopped sage. Scatter into a shallow roasting tin and roast for 30 mins until it is brown and soft.  While the squash is roasting, prepare the risotto. Bring the stock to the boil and keep on a low simmer. In a separate pan, melt half the butter over a medium heat. Stir in the onions and sweat gently for 8-10 mins until soft but not coloured, stirring occasionally. Stir the rice into the onions until completely coated in the butter, then stir continuously until the rice is shiny and the edges of the grain start to look transparent.  Pour in the wine and simmer until totally evaporated. Add the stock, a ladleful at a time and stirring the rice over a low heat for 25-30 mins, until the rice is cooked al dente (with a slightly firm, starchy bite in the middle). The risotto should be creamy and slightly soupy. When you draw a wooden spoon through it, there should be a wake that holds for a few moments but not longer.  At the same time, gently fry the whole sage leaves in a little olive oil until crisp, then set aside on kitchen paper. When the squash is cooked, mash half of it to a rough purée and leave half whole. When the risotto is just done, stir though the purée, then add the cheese and butter and leave to rest for a few mins. Serve the risotto scattered with the whole chunks of squash and the crisp sage leaves.",
-    "image": "",
+    "image": "/images/autumn/recipes/butternutsquash.jpg",
     "duration": 50,
     "season": "autumn"
-  }  
+  },
+  {
+    "title": "Thai pumpkin soup",
+    "level": "easy",
+    "ingredients": [
+      "1½ kg pumpkin or squash, peeled and roughly chopped",
+      "4 tsp sunflower oil",
+      "1 onion, sliced",
+      "1 tbsp grated ginger",
+      "1 lemongrass, bashed a little",
+      "3-4 tbsp thai red curry paste",
+      "400ml can coconut milk",
+      "850ml vegetable stock",
+      "Lime juice and sugar, for seasoning",
+      "1 red chilli, sliced, to serve (optional)"
+    ],
+    "dishType": "starter",
+    "description": "Heat oven to 200c/180c fan/gas 6. Toss the pumpkin or squash in a roasting tin with half the oil and seasoning, then roast for 30 mins until golden and tender. Meanwhile, put the remaining oil in a pan with the onion, ginger and lemongrass. Gently cook for 8-10 mins until softened. Stir in the curry paste for 1 min, followed by the roasted pumpkin, all but 3 tbsp of the coconut milk and the stock. Bring to a simmer, cook for 5 mins, then fish out the lemongrass. Cool for a few mins, then whizz until smooth with a hand blender, or in a large blender in batches. Return to the pan to heat through, seasoning with salt, pepper, lime juice and sugar, if it needs it. Serve drizzled with the remaining coconut milk and scattered with chilli, if you like.",
+    "image": "/images/autumn/recipes/thaipumpkinsoup.jpeg",
+    "duration": 65,
+    "season": "autumn"
+  },
+
+  {
+    "title": "Squash & barley salad with balsamic vinaigrette",
+    "level": "easy",
+    "ingredients": [
+      "1 butternut squash, peeled and cut into long pieces",
+      "1 tbsp olive oil",
+      "250g pearl barley",
+      "300g tenderstem broccoli, cut into medium-size pieces",
+      "1 small red onion, diced",
+      "2 tbsp pumpkin seeds",
+      "1 tbsp small capers, rinsed",
+      "15 black olives, pitted",
+      "20g pack basil, chopped",
+      [
+        "For the dressing",
+        "5 tbsp balsamic vinegar",
+        "6 tbsp extra-virgin olive oil",
+        "1 tbsp dijon mustard",
+        "1 garlic clove, finely chopped"
+      ]
+    ],
+    "dishType": "main dish",
+    "description": "Heat oven to 200C/fan 180C/gas 6. Place the squash on a baking tray and toss with olive oil. Roast for 20 mins. Meanwhile, boil the barley for about 25 mins in salted water until tender, but al dente. While this is happening, whisk the dressing ingredients in a small bowl, then season with salt and pepper. Drain the barley, then tip it into a bowl and pour over the dressing. Mix well and let it cool. Boil the broccoli in salted water until just tender, then drain and rinse in cold water. Drain and pat dry. Add the broccoli and remaining ingredients to the barley and mix well. This will keep for 3 days in the fridge and is delicious warm or cold.",
+    "image": "/images/autumn/recipes/squashbarley.jpg",
+    "duration": 30,
+    "season": "autumn"
+  },
+
+  {
+    "title": "Autumn chestnut salad",
+    "level": "easy",
+    "ingredients": [
+      "3 slices crusty bread, cut into small cubes",
+      "3-4 tbsp olive oil",
+      "70g pack lamb's lettuce",
+      "175g cooked chestnut, broken into bite-sized pieces",
+      "200g cooked beetroot(not in vinegar), peeled and diced",
+      "4-6 slices serrano ham, halved",
+      "1 eating apple"
+      ],
+    "dishType": "starter",
+    "description": "Heat oven to 200c/fan 180c/gas 6. Toss the bread with the olive oil in a small roasting tin. Season with salt and pepper, spread out over a single layer, then bake for 12-15 mins until the bread is browned and crisp. Tip onto a plate lined with kitchen paper, then leave to cool. For the dressing, mix the onion with the vinegar in a small bowl, then leave for 10 mins. Combine the mustard and oil, season with salt and pepper, then whisk until slightly thickened. Stir into the onions, then set aside. Tip the lettuce into a large bowl. Add the chestnuts to the bowl with the beetroot. Heat a non-stick pan, add the ham, then fry quickly on each side until crisp. Just before serving, thinly slice the apple, then add to the bowl with the croutons. Add the dressing, then toss everything together until glistening. Pile onto 4 or 6 plates and set 2 pieces of ham on top of each.",
+    "image": "/images/autumn/recipes/autumnchestnutsalad.jpg",
+    "duration": 40,
+    "season": "autumn"
+  },
+
+
+
+
+
+
 ]
 
 
