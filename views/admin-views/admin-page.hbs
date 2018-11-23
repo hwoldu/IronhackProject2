@@ -3,7 +3,8 @@
 <p>There is {{recipeVerifNumber}} recipe(s) to accept</p>
 
 
-<ul>
+
+
   {{#each recipeArray}}
   <h4>{{this.title}}</h4>
   <ul>
@@ -11,9 +12,9 @@
     <li>Level: {{this.level}}</li>
     <li>Duration: {{this.duration}}</li>
     <li> Ingredients: {{this.ingredients}}</li> 
-   
-   
+  
 
-  <button>Validate the recipe</button>
+
+  <a href="/admin/{{this._id}}/recipes"><button>Validate the recipe</button></a>
+  </ul>
   {{/each}}
-</ul>
