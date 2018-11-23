@@ -1,7 +1,7 @@
 require('dotenv').config();
 
 const mongoose = require("mongoose");
-const Produce = require("../models/produce-list.js");
+const Produce = require("../models/produceSchema.js");
 
 mongoose
   .connect(process.env.MONGODB_URI, { useNewUrlParser: true })
