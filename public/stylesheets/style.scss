@@ -133,11 +133,6 @@ header {
   padding-right: 50%;
 }
 
-.produces img {
-  width: auto;
-  max-height: 250px;
-
-}
 
 .produces {
   display: flex;
@@ -175,3 +170,61 @@ header {
   flex-direction: column;
 }
 
+// fade-in image
+// ----------------------------------------------------------------
+
+.container {
+  position: relative;
+  width: 23%;
+  padding-bottom: 20px;
+
+}
+
+.image {
+  display: block;
+  width: 100%;
+  max-height: 150px;
+  border-radius: 3%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: black;
+  border-radius: 3%;
+  
+}
+
+.container:hover .overlay {
+ opacity: 0.5;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+
+
+// .produces img {
+//   display: block;
+//   margin-left: auto;
+//   margin-right: auto;
+//   width: 60%;
+//   border-radius: 3%;
+//   max-height: 200px;
+
+// }

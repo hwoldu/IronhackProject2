@@ -12,11 +12,15 @@
   <h3>All the seasonal produces</h3>
   <section class="produces"> 
 {{#each produces}}
-    <div> 
-      <p>{{this.name}}</p>
-      <img src="{{this.image}}" alt="" />
-    </div>
    
+<div class="container">
+  <img src="{{this.image}}" class="image">
+  <div class="overlay">
+    <div class="text">{{this.name}}</div>
+  </div>
+</div>
+
+
  {{/each}}
 
   </section>

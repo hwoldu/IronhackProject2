@@ -106,10 +106,6 @@ header {
 .intro p {
   padding-right: 50%; }
 
-.produces img {
-  width: auto;
-  max-height: 250px; }
-
 .produces {
   display: flex;
   justify-content: space-around;
@@ -138,5 +134,42 @@ header {
   justify-content: space-around;
   flex-wrap: wrap;
   flex-direction: column; }
+
+.container {
+  position: relative;
+  width: 23%;
+  padding-bottom: 20px; }
+
+.image {
+  display: block;
+  width: 100%;
+  max-height: 150px;
+  border-radius: 3%;
+  object-fit: cover; }
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: black;
+  border-radius: 3%; }
+
+.container:hover .overlay {
+  opacity: 0.5; }
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%); }
 
 /*# sourceMappingURL=style.css.map */
