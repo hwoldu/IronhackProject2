@@ -1,17 +1,17 @@
 <section class="home">
 
-<h2>Recipes</h2>
-<section class="intro">
+      <h2>All {{season}} recipes</h2>
+      <section>
 
-  <section class="produces"> 
+            <section class="recipes">
 
-{{#each recipeSchema}}
-<div>
-      <p>{{this.title}}</p>
-      <img src="{{this.image}}" alt=""></a>
-</div>
-{{/each}}
+                  {{#each recipeSchema}}
+                  <div class="polaroid">
+                        <p>{{this.title}}</p>
+                        <img src="{{this.image}}" alt=""></a>
+                  </div>
+                  {{/each}}
 
-</section>
-</section>
+            </section>
+      </section>
 </section>

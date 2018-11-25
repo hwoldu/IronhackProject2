@@ -1,3 +1,11 @@
+// en-dessous de 550px changer la taille des images
+
+// en-dessous de 750px changer le texte d'intro
+
+// changer les proportions des images d'index en-dessous de 1200px
+
+
+
 body {
   padding: 0;
   margin: 0;
@@ -70,7 +78,6 @@ html {
 }
 
 
-
 header {
   background-image: url("../images/homepage.jpg");
   background-repeat: no-repeat;
@@ -134,11 +141,6 @@ header {
 }
 
 
-.produces {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
 
 .active {
   width: 50%;
@@ -156,24 +158,30 @@ header {
   justify-content: space-around;
 }
 
-.recipes img {
-  width: auto;
-  max-height: 250px;
-  flex-direction: row;
+// .recipes img {
+//   width: auto;
+//   max-height: 250px;
+//   flex-direction: row;
+// }
 
-}
+// .recipes {
+//   display: flex;
+//   justify-content: space-around;
+//   flex-wrap: wrap;
+//   flex-direction: column;
+// }
 
-.recipes {
+// fade-in image and index page
+// ----------------------------------------------------------------
+
+
+.produces {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  flex-direction: column;
 }
 
-// fade-in image
-// ----------------------------------------------------------------
-
-.container {
+.container-prod {
   position: relative;
   width: 23%;
   padding-bottom: 20px;
@@ -204,7 +212,7 @@ header {
   
 }
 
-.container:hover .overlay {
+.container-prod:hover .overlay {
  opacity: 0.8;
 }
 
@@ -218,14 +226,37 @@ header {
   -ms-transform: translate(-50%, -50%);
 }
 
+// recipes page
+// -----------------------------------------------------------------
 
 
-// .produces img {
-//   display: block;
-//   margin-left: auto;
-//   margin-right: auto;
-//   width: 60%;
-//   border-radius: 3%;
-//   max-height: 200px;
+div.polaroid {
+  width: 30%;
+  height: 30%;
+  background-color: white;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 
-// }
+.recipes img {
+  display: block;
+  width: 100%;
+  max-height: 210px;
+  object-fit: cover;
+  object-position: center;
+}
+
+div.container {
+  text-align: center;
+  padding: 10px 20px;
+}
+
+.recipes {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.polaroid p {
+  text-align: center;
+}
