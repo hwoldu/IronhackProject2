@@ -36,24 +36,35 @@ html {
 
 .winter button {
   background-color: #990000;
-  padding: 25px 180px;
-  border-radius: 10px; }
+  color: white;
+  font-size: 14px;
+  font-family: 'Work Sans', sans-serif;
+  padding: 3px 30px;
+  border-radius: 50px;
+  border-color: #990000; }
 
 .spring button {
   background-color: #15A071;
-  padding: 25px 180px;
-  border-radius: 10px; }
+  font-size: 14px;
+  font-family: 'Work Sans', sans-serif;
+  padding: 3px 30px;
+  border-radius: 50px;
+  border-color: #15A071; }
 
 .summer button {
   background-color: #F172A1;
-  padding: 25px 180px;
-  border-radius: 10px; }
+  font-size: 14px;
+  font-family: 'Work Sans', sans-serif;
+  padding: 3px 30px;
+  border-radius: 50px;
+  border-color: #F172A1; }
 
 .autumn button {
   background-color: #FFAE19;
-  padding: 1px 70px;
-  border-radius: 10px;
-  font-size: 15px;
+  font-size: 14px;
+  padding: 3px 30px;
+  border-radius: 50px;
+  border-color: #FFAE19;
   font-family: 'Work Sans', sans-serif; }
 
 header {

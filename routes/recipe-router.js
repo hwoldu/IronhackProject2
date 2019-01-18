@@ -15,17 +15,6 @@ router.get('/recipe-list', (req, res, next) => {
 });
 
 
-router.get('/recipe-one', (req, res, next) => {
-  recipeList.find( { title: {$eq: res.locals.title} } )
-    .then(arrayDocs => {
-      res.locals.recipeSchema = arrayDocs;
-      res.render("recipe-views/recipe-one.hbs");
-    })
-    .catch(err => next(err));
-});
-
-
-
 router.get("/recipe/add", (req, res, next) => {
   if (!req.user) {
     // req.flash("error", "You have to be logged-in to add a recipe. 🥨");
