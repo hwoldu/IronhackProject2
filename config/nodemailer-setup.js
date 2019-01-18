@@ -37,4 +37,4 @@ function sendPasswordEmail () {
   });
 }
 
-modeule.exports = { sendSignupMail, sendPasswordEmail };
+module.exports = { sendSignupMail, sendPasswordEmail };

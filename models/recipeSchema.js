@@ -9,7 +9,6 @@ const recipeSchema = new Schema({
     enum: ["easy", "medium", "difficult"],
     required: true
   },
-  season: { type: String, enum: ["winter", "spring", "summer", "autumn"] },
   ingredients: { type: Array },
   description: { type: String },
   image: { type: String },

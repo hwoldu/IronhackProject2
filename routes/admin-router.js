@@ -37,7 +37,7 @@ const {recipesId} = req.params;
     {$set:{verified: true}},
     { runValidators: true })
     .then(recipeResults => {
-      console.log(recipeResults)
+      console.log(recipeResults);
       res.locals.recipeArray = recipeResults;
       res.locals.recipeVerifNumber = recipeResults.length;
       res.redirect("/admin");

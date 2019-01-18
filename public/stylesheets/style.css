@@ -188,4 +188,10 @@ div.container {
 .polaroid p {
   text-align: center; }
 
+.form {
+  display: block;
+  background-color: gray;
+  padding-top: 15px;
+  padding-left: 15px; }
+
 /*# sourceMappingURL=style.css.map */

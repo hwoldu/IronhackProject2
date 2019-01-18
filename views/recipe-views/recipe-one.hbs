@@ -1,0 +1,12 @@
+<section class="one-recipe">
+
+{{#each recipeSchema}}
+    <h2>{{this.title}}</h2>
+    <img src="{{this.image}}" alt={{this.title}}>
+    <p>{{this.level}}</p>
+    <p>{{this.duration}}</p>
+    <p>{{this.ingredients}}</p>
+    <p>{{this.description}}</p>
+{{/each}}
+
+</section>
