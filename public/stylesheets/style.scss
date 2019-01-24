@@ -4,8 +4,6 @@
 
 // changer les proportions des images d'index en-dessous de 1200px
 
-
-
 body {
   padding: 0;
   margin: 0;
@@ -58,6 +56,8 @@ html {
   padding: 3px 30px;
   border-radius: 50px;
   border-color:#990000; 
+  display: block;
+  margin: auto;
 }
 
 .spring button {
@@ -67,6 +67,8 @@ html {
   padding: 3px 30px;
   border-radius: 50px;
   border-color: #15A071; 
+  display: block;
+  margin: auto;
 }
 
 .summer button {
@@ -76,6 +78,8 @@ html {
   padding: 3px 30px;
   border-radius: 50px;
   border-color: #F172A1; 
+  display: block;
+  margin: auto;
 }
 
 .autumn button {
@@ -85,7 +89,34 @@ html {
   padding: 3px 30px;
   border-radius: 50px;
   border-color: #FFAE19; 
+  display: block;
+  margin: auto;
 
+}
+
+.login-form, 
+.signup-form {
+  border: 1px solid #bdbdbd;
+  border-radius: 50px;
+  margin-left: 30%;
+  margin-right: 30%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+
+.form {
+  display: block;
+  margin: 0 33%; 
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-bottom: 15px;
+}
+
+.form-input {
+  display: block;
+  border-radius: 50px;
+  border: 1px solid #d8d8d8;
 }
 
 
@@ -151,8 +182,6 @@ header {
   padding-right: 50%;
 }
 
-
-
 .active {
   width: 50%;
   display: flex;
@@ -181,6 +210,8 @@ header {
 //   flex-wrap: wrap;
 //   flex-direction: column;
 // }
+
+
 
 // fade-in image and index page
 // ----------------------------------------------------------------
@@ -272,9 +303,3 @@ div.container {
   text-align: center;
 }
 
-.form {
-  display: block;
-  background-color: gray;
-  padding-top: 15px;
-  padding-left: 15px;
-}

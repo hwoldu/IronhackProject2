@@ -4,6 +4,7 @@ const recipeList = require("../models/recipeSchema.js");
 
 
 
+
 // router for recipe schema 🍝
 router.get('/recipe-list', (req, res, next) => {
   recipeList.find( { season: {$eq: res.locals.season} } )
@@ -32,7 +33,7 @@ router.post("/process-recipe", (req, res, next) => {
   const { title, level, ingredients, dishType, description, image, duration, season  } 
   = req.body;
   const owner = req.user._id;
-  Recipe.create( { title, level, ingredients, dishType, description, image, duration, season } )
+  recipeList.create( { title, level, ingredients, dishType, description, image, duration, season } )
     .then( recipeDoc => {
       // req.flash("success", "Recipe created successfully 🍪 ");
       res.redirect("/my-recipes");
@@ -44,9 +45,17 @@ router.get("/recipe-list", (req, res, next) => {
   res.render("recipe-views/recipe-list.hbs");
 });
 
-router.get("/recipe-one", (req, res, next) => {
-  res.render("recipe-views/recipe-one.hbs");
-})
+router.get("/recipe-one/:recipeId", (req, res, next) => {
+  const { recipeId } = req.params;
+  console.log(recipeId);
+  recipeList.findById(recipeId)
+      .then(recipeDoc => {
+        res.locals.recipeItem = recipeDoc;
+        res.render("recipe-views/recipe-one.hbs");
+      })
+      .catch(err => next(err));
+});
+
 
 
 module.exports = router;

@@ -1,12 +1,10 @@
 <section class="one-recipe">
 
-{{#each recipeSchema}}
-    <h2>{{this.title}}</h2>
-    <img src="{{this.image}}" alt={{this.title}}>
-    <p>{{this.level}}</p>
-    <p>{{this.duration}}</p>
-    <p>{{this.ingredients}}</p>
-    <p>{{this.description}}</p>
-{{/each}}
+    <h2>{{recipeItem.title}}</h2>
+    <img src="{{recipeItem.image}}" alt={{recipeItem.title}}>
+    <p>{{recipeItem.level}}</p>
+    <p>{{recipeItem.duration}}</p>
+    <p>{{recipeItem.ingredients}}</p>
+    <p>{{recipeItem.description}}</p>
 
 </section>

@@ -7,8 +7,8 @@
 
                   {{#each recipeSchema}}
                   <div class="polaroid">
-                        <p>{{this.title}}</p>
-                        <a href="/recipe-one"><img src="{{this.image}}" alt=""/></a>
+                    <a href="/recipe-one/{{this._id}}"><p>{{this.title}}</p>
+                    <img src="{{this.image}}" alt=""/></a>
                   </div>
                   {{/each}}
 

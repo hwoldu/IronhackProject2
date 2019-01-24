@@ -41,7 +41,9 @@ html {
   font-family: 'Work Sans', sans-serif;
   padding: 3px 30px;
   border-radius: 50px;
-  border-color: #990000; }
+  border-color: #990000;
+  display: block;
+  margin: auto; }
 
 .spring button {
   background-color: #15A071;
@@ -49,7 +51,9 @@ html {
   font-family: 'Work Sans', sans-serif;
   padding: 3px 30px;
   border-radius: 50px;
-  border-color: #15A071; }
+  border-color: #15A071;
+  display: block;
+  margin: auto; }
 
 .summer button {
   background-color: #F172A1;
@@ -57,15 +61,40 @@ html {
   font-family: 'Work Sans', sans-serif;
   padding: 3px 30px;
   border-radius: 50px;
-  border-color: #F172A1; }
+  border-color: #F172A1;
+  display: block;
+  margin: auto; }
 
 .autumn button {
   background-color: #FFAE19;
   font-size: 14px;
+  font-family: 'Work Sans', sans-serif;
   padding: 3px 30px;
   border-radius: 50px;
   border-color: #FFAE19;
-  font-family: 'Work Sans', sans-serif; }
+  display: block;
+  margin: auto; }
+
+.login-form,
+.signup-form {
+  border: 1px solid #bdbdbd;
+  border-radius: 50px;
+  margin-left: 30%;
+  margin-right: 30%;
+  padding-top: 20px;
+  padding-bottom: 20px; }
+
+.form {
+  display: block;
+  margin: 0 33%;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-bottom: 15px; }
+
+.form-input {
+  display: block;
+  border-radius: 50px;
+  border: 1px solid #d8d8d8; }
 
 header {
   background-image: url("../images/homepage.jpg");
@@ -198,11 +227,5 @@ div.container {
 
 .polaroid p {
   text-align: center; }
-
-.form {
-  display: block;
-  background-color: gray;
-  padding-top: 15px;
-  padding-left: 15px; }
 
 /*# sourceMappingURL=style.css.map */
