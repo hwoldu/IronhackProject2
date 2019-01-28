@@ -1,10 +1,20 @@
 <section class="one-recipe">
+    <div class="div1-oneRecipe">
+      <h2>{{recipeItem.title}}</h2>
+      <img src="{{recipeItem.image}}" alt={{recipeItem.title}}>
+    </div>
+    <div class="div2-oneRecipe">
+      <p>{{recipeItem.level}}</p>
+      <p>{{recipeItem.duration}}</p>
 
-    <h2>{{recipeItem.title}}</h2>
-    <img src="{{recipeItem.image}}" alt={{recipeItem.title}}>
-    <p>{{recipeItem.level}}</p>
-    <p>{{recipeItem.duration}}</p>
-    <p>{{recipeItem.ingredients}}</p>
-    <p>{{recipeItem.description}}</p>
+      <ul>
+      {{#each recipeItem}}
+        <li>{{this.ingredients}}</li>
+      {{/each}}
+      </ul>
+    </div>
 
+    <div>
+      <p>{{recipeItem.description}}</p>
+    </div>
 </section>

@@ -303,3 +303,24 @@ div.container {
   text-align: center;
 }
 
+// one Recipe
+// -----------------------------------------------------------
+
+.div1-oneRecipe {
+  display: flex;
+  align-items: column;
+}
+
+.div1-oneRecipe img {
+  width: 20em;
+  height: 20em;
+}
+
+.div2-oneRecipe {
+  display: block;
+  margin: 0 60% 0 5%;
+}
+
+section.one-recipe {
+  margin: 0 5em;
+}
