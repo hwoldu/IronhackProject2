@@ -246,7 +246,7 @@ const recipeSchema = [
     ],
     "dishType": "main dish",
     "description": "Soak the rice in water for 1 hr, then rinse in a sieve until the water runs clear. Heat oven to 200C/180C fan/gas 6. Bring a large saucepan of water to the boil with the stock cube in it. Add the rice and lentils, and simmer for 5 mins until just beginning to soften on the outside. Drain well.  Toss the chunky parsnips with 2 tbsp of the oil, the orange zest, 1 tsp of the cumin seeds and plenty of seasoning in a roasting tin. Roast for 30 mins until golden, then drizzle with honey and roast for 5-10 mins more.  Meanwhile, heat 1 tbsp of the oil in a wide flameproof casserole or deep pan. Fry the onions until softened and browned. Stir in the remaining cumin with the rest of the spices and cook for 1 min, then add the grated parsnips and raisins, and cook for 1 min more. Turn the heat right down and stir in the rice mixture with plenty of seasoning.  Melt the butter and remaining 1 tbsp oil in the big saucepan you cooked the rice in. Tip in the rice mixture and roughly flatten the surface. Poke 3 steam holes in the rice with the handle of a wooden spoon. Cover the pan with a tea towel, then put on the lid. Cook for 20-25 mins more, making sure the heat stays quite low.  To make the herb sauce, whizz all the ingredients to a salsa-like mix. Spread the rice on a serving platter, breaking up any crispy chunks from the bottom. Top with the roasted parsnips and herb sauce, and serve with some yogurt, if you like.",
-    "image": "./images/winter/recipes/parsnip-pilaf.jpg",
+    "image": "/images/winter/recipes/parsnip-pilaf.jpg",
     "duration": 95,
     "season": "winter"
   },
@@ -269,7 +269,7 @@ const recipeSchema = [
     ],
     "dishType": "dessert",
     "description": "Heat oven to 190C/fan 170C/gas 5. Put the chopped apples, lemon zest, rosemary, if using, and sugar in a saucepan. Add the lemon juice and cook for 3-4 mins. Tip in the pears and cook 2-3 mins more, until the fruits are just beginning to soften. Spoon the fruits and juices into a 1.7 litre pudding dish and flatten slightly.  For the crumble, finely chop half the walnuts in a food processor until reduced to the consistency of ground almonds. Add the flour, butter and sugar and continue to blitz to a coarse or fine crumble mix, whichever you prefer.  Roughly break the remaining walnuts with your fingers and stir into the crumble. Scatter the crumble mix on top of the fruits and bake for 20-25 mins until golden brown. Serve warm with cream or custard.",
-    "image": "./images/winter/recipes/crumble.jpg",
+    "image": "/images/winter/recipes/crumble.jpg",
     "duration": 60,
     "season": "winter"
   },
@@ -292,7 +292,7 @@ const recipeSchema = [
     ],
     "dishType": "dessert",
     "description": "Heat oven to 180C/160C fan/gas 4. Toss the pumpkin (or squash) in a little oil on a baking tray. Roast until soft enough to squash with the back of a fork – this can take between 40 mins and 1 hr, depending on the type of pumpkin or squash you use. Set aside to cool.  Meanwhile, on a lightly floured work surface, roll out the pastry to the thickness of a £1 coin. Drape it over your rolling pin and lift into a 23cm fluted tart tin. Push the pastry into the corners of the tin using a scrap of excess pastry (you’re less likely to pierce the pastry this way than using a finger). Trim the excess pastry, leaving about 1cm hanging over the edge of the tin; it will shrink as it cooks. Chill for 20 mins.  Increase the oven to 200C/180C fan/gas 6. Line the tart case with a sheet of baking parchment (scrunch it up first to make it more pliable), then fill with baking beans or dry rice. Bake for 15 mins until the sides look golden, then remove the parchment and filling. Bake for another 5-10 mins until the base looks biscuity and dry. Trim the edges with a small, serrated knife.  Tip the roasted pumpkin (or squash), maple syrup, sugar, salt, spices, cornflour and milk into a food processor or blender and blitz until smooth. Pour through a sieve into a small pan and cook for 5 mins, stirring continuously, until thickened.  Fill the tart case with the pumpkin filling, then return to the oven and lower the heat to 180C/160C fan/gas 4. Bake for 30 mins until the filling is set when you wobble the tart tin. Cool for 20-25 mins. Dust with icing sugar and serve warm, or chill and serve within two days.",
-    "image": "./images/winter/recipes/pumpkin-pie.jpg",
+    "image": "/images/winter/recipes/pumpkin-pie.jpg",
     "duration": 75,
     "season": "winter"
   },

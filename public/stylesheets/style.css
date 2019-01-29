@@ -230,6 +230,7 @@ div.container {
 
 .div1-oneRecipe {
   display: flex;
+  justify-content: space-between;
   align-items: column; }
 
 .div1-oneRecipe img {
