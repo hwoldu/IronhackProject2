@@ -4,12 +4,13 @@
       <img src="{{recipeItem.image}}" alt={{recipeItem.title}}>
     </div>
     <div class="div2-oneRecipe">
-      <p>{{recipeItem.level}}</p>
-      <p>{{recipeItem.duration}}</p>
+      <p>Level: {{recipeItem.level}}</p>
+      <p>{{recipeItem.duration}} min</p>
 
       <ul>
-      {{#each recipeItem}}
-        <li>{{this.ingredients}}</li>
+        Ingredients:
+      {{#each recipeItem.ingredients}}
+        <li>{{this}}</li>
       {{/each}}
       </ul>
     </div>
