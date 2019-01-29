@@ -1,21 +1,27 @@
 <section class="one-recipe">
-    <div class="div1-oneRecipe">
-      <h2>{{recipeItem.title}}</h2>
-      <img src="{{recipeItem.image}}" alt={{recipeItem.title}}>
-    </div>
-    <div class="div2-oneRecipe">
-      <p>Level: {{recipeItem.level}}</p>
+  <div class="div1-oneRecipe">
+    <h2>{{recipeItem.title}}</h2>
+  </div>
+  <div class="div2-oneRecipe">
+    <div class="level-duration-ingredients">
+      <p class="level">Level:</p>
+      <p>{{recipeItem.level}}</p>
+      <p class="duration">Duration:</p>
       <p>{{recipeItem.duration}} min</p>
 
+      <p class="ingredients">Ingredients:</p>
       <ul>
-        Ingredients:
-      {{#each recipeItem.ingredients}}
-        <li>{{this}}</li>
-      {{/each}}
+        {{#each recipeItem.ingredients}}
+        <li class="type-sidelines"><span>{{this}}</span></li>
+        {{/each}}
       </ul>
     </div>
-
-    <div>
-      <p>{{recipeItem.description}}</p>
+    <div class="onerecipe-img">
+      <img src="{{recipeItem.image}}" alt={{recipeItem.title}}>
     </div>
+  </div>
+
+  <div>
+    <p>{{recipeItem.description}}</p>
+  </div>
 </section>

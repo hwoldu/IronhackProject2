@@ -9,10 +9,11 @@ body {
   margin: 0;
   font-family: 'Paytone One', sans-serif;
   font-family: 'Work Sans', sans-serif;
+  color: #130303;
 }
 
 a {
-  color: black;
+  color: #130303;
 }
 
 html {
@@ -133,7 +134,7 @@ header {
 
 
 .nav-bar {
-  background-color: #222222;
+  background-color: #130303;
   margin-top: 20px;
   height : 30px;
   display: flex;
@@ -198,19 +199,6 @@ header {
   justify-content: space-around;
 }
 
-// .recipes img {
-//   width: auto;
-//   max-height: 250px;
-//   flex-direction: row;
-// }
-
-// .recipes {
-//   display: flex;
-//   justify-content: space-around;
-//   flex-wrap: wrap;
-//   flex-direction: column;
-// }
-
 
 
 // fade-in image and index page
@@ -271,6 +259,9 @@ header {
 // recipes page
 // -----------------------------------------------------------------
 
+a:link {
+  text-decoration: none;
+}
 
 div.polaroid {
   width: 30%;
@@ -297,10 +288,15 @@ div.container {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+
 }
 
 .polaroid p {
   text-align: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 2.1em;
+
 }
 
 // one Recipe
@@ -308,20 +304,36 @@ div.container {
 
 .div1-oneRecipe {
   display: flex;
-  justify-content: space-between;
-  align-items: column;
 }
 
-.div1-oneRecipe img {
-  width: 20em;
-  height: 20em;
+.div2-oneRecipe img {
+  width: 100%;
+  height: auto;
 }
 
 .div2-oneRecipe {
-  display: block;
-  margin: 0 60% 0 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: column;
+  margin: 0 5% 0 5%;
 }
 
 section.one-recipe {
   margin: 0 5em;
 }
+
+.level-duration-ingredients {
+  margin-right: 5em;
+  //background-color: rgba(188, 171, 174, 1);
+}
+
+.level,
+.duration,
+.ingredients {
+  background-color:  rgba(188, 171, 174, 0.5);
+  width: 200px;
+}
+
+
+
+

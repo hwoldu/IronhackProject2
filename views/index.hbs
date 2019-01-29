@@ -11,17 +11,15 @@
 
   <h3>Ideas of seasonal products</h3>
   <section class="produces"> 
-{{#each produces}}
-   
-<div class="container-prod">
-  <img src="{{this.image}}" class="image">
-  <div class="overlay">
-    <div class="text">{{this.name}}</div>
-  </div>
-</div>
 
-
- {{/each}}
+    {{#each produces}}  
+      <div class="container-prod">
+        <img src="{{this.image}}" class="image">
+        <div class="overlay">
+          <div class="text">{{this.name}}</div>
+        </div>
+      </div>
+    {{/each}}
 
   </section>
 

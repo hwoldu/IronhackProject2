@@ -246,7 +246,7 @@ const produce = [
     season: "spring",
   },
   {
-    name: "Kimi",
+    name: "Kiwi",
     image: "/images/spring/kiwi.jpg",
     season: "spring",
   },

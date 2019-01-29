@@ -2,10 +2,11 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Paytone One', sans-serif;
-  font-family: 'Work Sans', sans-serif; }
+  font-family: 'Work Sans', sans-serif;
+  color: #130303; }
 
 a {
-  color: black; }
+  color: #130303; }
 
 html {
   margin: 0; }
@@ -107,7 +108,7 @@ header {
   justify-content: space-between; }
 
 .nav-bar {
-  background-color: #222222;
+  background-color: #130303;
   margin-top: 20px;
   height: 30px;
   display: flex;
@@ -202,6 +203,9 @@ header {
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%); }
 
+a:link {
+  text-decoration: none; }
+
 div.polaroid {
   width: 30%;
   height: 30%;
@@ -226,22 +230,34 @@ div.container {
   flex-wrap: wrap; }
 
 .polaroid p {
-  text-align: center; }
+  text-align: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 2.1em; }
 
 .div1-oneRecipe {
-  display: flex;
-  justify-content: space-between;
-  align-items: column; }
+  display: flex; }
 
-.div1-oneRecipe img {
-  width: 20em;
-  height: 20em; }
+.div2-oneRecipe img {
+  width: 100%;
+  height: auto; }
 
 .div2-oneRecipe {
-  display: block;
-  margin: 0 60% 0 5%; }
+  display: flex;
+  justify-content: space-between;
+  align-items: column;
+  margin: 0 5% 0 5%; }
 
 section.one-recipe {
   margin: 0 5em; }
+
+.level-duration-ingredients {
+  margin-right: 5em; }
+
+.level,
+.duration,
+.ingredients {
+  background-color: rgba(188, 171, 174, 0.5);
+  width: 200px; }
 
 /*# sourceMappingURL=style.css.map */
