@@ -16,7 +16,7 @@
       </section>
 </section> -->
 
-<section class="home">
+<!-- <section class="home">
  <h2>All {{season}} recipes</h2>
 
 <section class="produces"> 
@@ -33,4 +33,19 @@
     {{/each}}
 
   </section>
-  </section>
+  </section> -->
+
+
+<h2>All {{season}} recipes</h2>
+
+<div class="container">
+  {{#each recipeSchema}}  
+  <div>
+    <a href="/recipe-one/{{this._id}}">
+    <span>{{this.title}}</span>
+    <img src="{{this.image}}" alt="">
+    </a>
+  </div>
+   {{/each}}
+  
+</div>
