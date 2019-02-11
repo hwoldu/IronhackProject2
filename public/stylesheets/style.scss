@@ -97,7 +97,8 @@ html {
 }
 
 .login-form, 
-.signup-form {
+.signup-form,
+.add-recipe {
   border: 1px solid #bdbdbd;
   border-radius: 50px;
   margin-left: 30%;
@@ -406,4 +407,9 @@ body {
       }
     }
   }
+}
+
+.email {
+  font-weight: bold;
+  color: white;
 }

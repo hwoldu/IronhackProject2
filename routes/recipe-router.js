@@ -18,14 +18,13 @@ router.get('/recipe-list', (req, res, next) => {
 
 router.get("/recipe/add", (req, res, next) => {
   if (!req.user) {
-    // req.flash("error", "You have to be logged-in to add a recipe. 🥨");
+    req.flash("error", "You have to be logged-in to add a recipe. 🥨");
     res.redirect("/login");
     return;
   }
   else {
-    res.render("recipe-views/recipe-list.hbs");
+    res.render("recipe-views/recipe-form.hbs");
   }
-  res.render("recipe-views/recipe-form.hbs");
 });
 
 
