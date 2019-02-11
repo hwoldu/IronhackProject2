@@ -25,8 +25,6 @@ router.get("/signup", (req, res, next) => {
 router.post("/signup-process", (req, res, next) => {
   const { fullName, username, email, password } = req.body;
 
-
-
   if (!password || password.match(/[0-9]/) === null) {
     req.flash("error", "Password can't be blank and must contain a number");
     res.redirect("/login");
@@ -58,6 +56,10 @@ router.post("/signup-process", (req, res, next) => {
 //   })
 //     .catch(err => next(err));
 // });
+
+router.get("/login", (req, res, next) => {
+  res.render("auth-views/login-form.hbs");
+});
 
 router.post("/login-process", (req, res, next) => {
   const { username, password } = req.body;
@@ -91,9 +93,7 @@ router.post("/login-process", (req, res, next) => {
     .catch(err => next(err));
 });
 
-router.get("/login", (req, res, next) => {
-  res.render("auth-views/login-form.hbs");
-});
+
 
 router.get("/logout", (req, res, next) => {
   req.logout();

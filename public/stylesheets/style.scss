@@ -203,6 +203,7 @@ header {
 
 
 
+
 // fade-in image and index page
 // ----------------------------------------------------------------
 
@@ -265,13 +266,13 @@ a:link {
   text-decoration: none;
 }
 
-div.polaroid {
-  width: 30%;
-  height: 30%;
-  background-color: white;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
+// div.polaroid {
+//   width: 30%;
+//   height: 30%;
+//   background-color: white;
+//   margin-bottom: 20px;
+//   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+// }
 
 .recipes img {
   display: block;
@@ -353,7 +354,7 @@ body {
     border-radius: 7px;
     margin: 60px 15px;
     transition: .7s all cubic-bezier(0.785, 0.135, 0.15, 0.86);
-    box-shadow: 0 50px 150px -20px rgba(0,0,0,.75);
+    box-shadow: 0 10px 50px -20px rgba(0,0,0,.75);
 
     img {
       width: 150%;
@@ -387,7 +388,7 @@ body {
       cursor: pointer;
       transform: scale(1.2);
       border-radius: 10px;
-      box-shadow: 0 20px 300px -20px rgba(0,0,0,1);
+      //box-shadow: 0 20px 50px -20px rgba(0,0,0,1);
   
 
       &:before {

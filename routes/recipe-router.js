@@ -25,18 +25,33 @@ router.get("/recipe/add", (req, res, next) => {
   }
 });
 
+router.get("/recipe/my-recipes", (req, res, next) => {
+  if (!req.user) {
+    req.flash("error", "You have to be logged-in to see your recipes.");
+    res.redirect("/login");
+    return;
+  }
+  else {
+    res.render("recipe-views/my-recipes.hbs");
+  }
+});
 
-router.post("/process-recipe", (req, res, next) => {
+
+router.post("/recipe/process-recipe", (req, res, next) => {
   const { title, level, ingredients, dishType, description, image, duration, season  } 
   = req.body;
   const owner = req.user._id;
-  recipeList.create( { title, level, ingredients, dishType, description, image, duration, season } )
+  recipeList.create( { title, level, ingredients, dishType, description, image, duration, season, owner } )
     .then( recipeDoc => {
-      // req.flash("success", "Recipe created successfully 🍪 ");
-      res.redirect("/my-recipes");
+      req.flash("success", "Recipe created successfully 🍪 ");
+      res.redirect("/recipe/my-recipes");
     })
     .catch(err => next(err));
 });
+
+
+
+
 
 router.get("/recipe-list", (req, res, next) => {
   res.render("recipe-views/recipe-list.hbs");

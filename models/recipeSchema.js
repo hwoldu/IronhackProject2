@@ -27,6 +27,9 @@ const recipeSchema = new Schema({
     type: Boolean,
     default: false,
     required: true,
+  },
+  owner: {
+    type: String,
   }
 });
 
