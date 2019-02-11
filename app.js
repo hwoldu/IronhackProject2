@@ -46,6 +46,8 @@ app.use(require('node-sass-middleware')({
   sourceMap: true
 }));
       
+hbs.registerPartials(path.join(__dirname, "views", "partials"));
+
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
@@ -54,8 +56,8 @@ app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 
 app.use(session({
   // "resave" & saveUninitialized are just here to avoid warning messages
-  resave: true,
   saveUninitialized: true,
+  resave: true,
 
   // "secret" should be a string that is different for every app
   secret: process.env.session_secret,
@@ -69,6 +71,14 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 
+app.use(flash());
+app.use((req, res, next) => {
+  res.locals.messages = req.flash();
+  res.locals.currentUser = req.user;
+  next();
+});
+
+
 
 // seasons date change
 
@@ -77,13 +87,13 @@ var month = date.toString().slice(4, 7);
 
 app.use((req, res, next ) => {
   
-  if ( month === "Mar" ||  month === "Apr" || month === "May" ) {
+  if ( month === "Mar" ||  month === "Apr" || month === "May"  ) {
     res.locals.season = "spring";
 }
-  else if  ( month === "Jun" ||  month === "Jul" ||  month === "Aug") {
+  else if  ( month === "Jun" ||  month === "Jul" ||  month === "Aug"  ) {
     res.locals.season = "summer";
   }
-  else if ( month === "Sep" || month === "Oct" || month === "Nov") {
+  else if ( month === "Sep" || month === "Oct" || month === "Nov"  ) {
     res.locals.season = "autumn";
   }
   else if ( month === "Dec" ||  month === "Jan" || month === "Feb") {
@@ -96,7 +106,7 @@ app.use((req, res, next ) => {
 
 
 // default value for title local
-app.locals.title = '';
+app.locals.title = 'SZNal';
 
 
 const index = require('./routes/index');

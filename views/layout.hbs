@@ -18,12 +18,12 @@
       <h1 class="home-title">{{title}}</h1>
     </div>
 
-      <nav class="nav-bar">
-        <div class="main-menu">
+    <nav class="nav-bar">
+      <div class="main-menu">
         <a href="/">Home</a>
         <a href="/recipe-list">Recipes</a>
-        </div>
-{{!-- 
+      </div>
+      {{!-- 
       <input type="text" id="login" placeholder="Type here">
      js file : 
       $(document).ready(function() {
@@ -31,22 +31,26 @@
         $('#login').keypress(function(event) {
           var key = (event.keyCode)
         } --}}
-{{!-- 
+      {{!-- 
       }) --}}
+
+      {{#if currentUser}}
+      <b>{{currentUser.email}}</b>
+      <div>
+        <a href="/logout">Log Out</a>
+      </div>
+      {{else}}
       <div class="active">
         <a href="/login">Log In</a>
         <a href="/signup">Sign Up</a>
       </div>
-
-      <div class="inactive">
-        <a href="/logout">Log Out</a>
-      </div>
-      </nav>
+      {{/if}}
+    </nav>
   </header>
 
   {{{body}}}
 
   <script src="/javascripts/script.js"></script>
-</body>                                                                                                                                                                                   
+</body>
 
 </html>

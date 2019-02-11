@@ -7,7 +7,7 @@ const Recipe = require("../models/recipeSchema.js");
 
 router.get("/admin", (req, res, next) => {
   if (!req.user || req.user.role !== "admin"){
-    // req.flash("error", "Only admins can do that. 🏄🏻‍");
+    req.flash("error", "Only admins can do that. 🏄🏻‍");
     res.redirect("/");
     return;
   }
@@ -26,7 +26,7 @@ router.get("/admin", (req, res, next) => {
 
 router.get("/admin/:recipesId/recipes", (req, res, next) => {
   if (!req.user || req.user.role !== "admin"){
-    // req.flash("error", "Only admins can do that. 🏄🏻‍");
+    req.flash("error", "Only admins can do that. 🏄🏻‍");
     res.redirect("/");
     return;
   }
