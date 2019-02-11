@@ -17,8 +17,16 @@ router.get("/meal-plan", (req, res, next) => {
 });
 
 
+
+router.get("/signup", (req, res, next) => {
+  res.render("auth-views/signup-form.hbs");
+});
+
 router.post("/signup-process", (req, res, next) => {
   const { fullName, username, email, password } = req.body;
+
+
+
   if (!password || password.match(/[0-9]/) === null) {
     req.flash("error", "Password can't be blank and must contain a number");
     res.redirect("/login");
@@ -36,9 +44,6 @@ router.post("/signup-process", (req, res, next) => {
 });
 
 
-router.get("/signup", (req, res, next) => {
-  res.render("auth-views/signup-form.hbs");
-});
 
 // 📨 CODE FOR EXPRESS USERS EMAIL OPTION. REPLACE ABOVE CODE IF YOU WANT TO USE   📪 
 // User.create({fullName, username, email, encryptedPassword })
