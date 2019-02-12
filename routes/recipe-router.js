@@ -3,7 +3,7 @@ const router = express.Router();
 const recipeList = require("../models/recipeSchema.js");
 
 
-// router for recipe schema 🍝
+// show all recipes
 router.get('/recipe-list', (req, res, next) => {
   recipeList.find( { season: {$eq: res.locals.season} } )
     .then(arrayDocs => {
@@ -14,6 +14,7 @@ router.get('/recipe-list', (req, res, next) => {
 });
 
 
+// add recipes
 router.get("/recipe/add", (req, res, next) => {
   if (!req.user) {
     req.flash("error", "You have to be logged-in to add a recipe. 🥨");
@@ -25,6 +26,7 @@ router.get("/recipe/add", (req, res, next) => {
   }
 });
 
+// show user's recipe
 router.get("/recipe/my-recipes", (req, res, next) => {
   if (!req.user) {
     req.flash("error", "You have to be logged-in to see your recipes.");
@@ -50,13 +52,7 @@ router.post("/recipe/process-recipe", (req, res, next) => {
 });
 
 
-
-
-
-router.get("/recipe-list", (req, res, next) => {
-  res.render("recipe-views/recipe-list.hbs");
-});
-
+// show recipe details
 router.get("/recipe-one/:recipeId", (req, res, next) => {
   const { recipeId } = req.params;
   console.log(recipeId);
@@ -67,7 +63,6 @@ router.get("/recipe-one/:recipeId", (req, res, next) => {
       })
       .catch(err => next(err));
 });
-
 
 
 module.exports = router;
