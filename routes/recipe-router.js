@@ -26,19 +26,6 @@ router.get("/recipe/add", (req, res, next) => {
   }
 });
 
-// show user's recipe
-router.get("/recipe/my-recipes", (req, res, next) => {
-  if (!req.user) {
-    req.flash("error", "You have to be logged-in to see your recipes.");
-    res.redirect("/login");
-    return;
-  }
-  else {
-    res.render("recipe-views/my-recipes.hbs");
-  }
-});
-
-
 router.post("/recipe/process-recipe", (req, res, next) => {
   const { title, level, ingredients, dishType, description, image, duration, season  } 
   = req.body;
@@ -49,6 +36,25 @@ router.post("/recipe/process-recipe", (req, res, next) => {
       res.redirect("/recipe/my-recipes");
     })
     .catch(err => next(err));
+});
+
+
+// show user's recipe
+router.get("/recipe/my-recipes", (req, res, next) => {
+  if (!req.user) {
+    req.flash("error", "You have to be logged-in to see your recipes.");
+    res.redirect("/login");
+    return;
+  }
+  else {
+    recipeList.find( { owner: {$eq: req.user._id} } )
+    .then(arrayDocs => {
+      res.locals.recipeUser = arrayDocs;
+      res.render("recipe-views/my-recipes.hbs");
+    })
+    .catch(err => next(err));
+    
+  }
 });
 
 

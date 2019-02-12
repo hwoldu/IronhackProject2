@@ -36,9 +36,14 @@ router.post("/signup-process", (req, res, next) => {
   User.create({ fullName, username, email, encryptedPassword })
     .then(userDoc => {
       req.flash("success", "Signup success 🤸🏾‍")
-      res.redirect("/login");
+      req.logIn(userDoc, () => {
+        req.flash("success", "Log in success! 🤜✨🤛 ")
+        res.redirect("/recipe/add");
+        return;
+      });
     })
-    .catch(err => next(err));
+    .catch(err => next(err));    
+    
 });
 
 
