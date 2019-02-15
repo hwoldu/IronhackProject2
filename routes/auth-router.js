@@ -6,16 +6,9 @@ const router = express.Router();
 const flash        = require('connect-flash');
 
 
-// this const from the Express lesson. Uncomment if want to use 🦄:
-// const { sendSignupMail } = require("../config/nodemailer-setup.js");
-
-// to encrypt passwords
-//const bcrptySalt = 10;
-
 router.get("/meal-plan", (req, res, next) => {
   res.render("recipe-views/meal-plan.hbs");
 });
-
 
 
 router.get("/signup", (req, res, next) => {
@@ -46,22 +39,6 @@ router.post("/signup-process", (req, res, next) => {
     
 });
 
-
-
-// 📨 CODE FOR EXPRESS USERS EMAIL OPTION. REPLACE ABOVE CODE IF YOU WANT TO USE   📪 
-// User.create({fullName, username, email, encryptedPassword })
-//     .then(userDoc => {
-//       // EXPRESS USERS EMAIL OPTION 
-//       sendSignupMail(userDoc) 
-//       .then(() => { 
-//       req.flash("success!, signup!);
-//       res.redirect("/");
-//     })
-//     .catch(err => next(err));
-//   })
-//     .catch(err => next(err));
-// });
-
 router.get("/login", (req, res, next) => {
   res.render("auth-views/login-form.hbs");
 });
@@ -80,7 +57,6 @@ router.post("/login-process", (req, res, next) => {
 
       const { encryptedPassword } = userDoc;
 
-      // check the password
       if (!bcrypt.compareSync(password, encryptedPassword)) {
         req.flash("error", "Incorrect password. 🤕");
         res.redirect("/login");
@@ -99,7 +75,6 @@ router.post("/login-process", (req, res, next) => {
 });
 
 
-
 router.get("/logout", (req, res, next) => {
   req.logout();
   req.flash("success", "Logged out successfully! 🏋🏻‍");
@@ -108,3 +83,25 @@ router.get("/logout", (req, res, next) => {
 
 
 module.exports = router;
+
+
+// this const from the Express lesson. Uncomment if want to use 🦄:
+// const { sendSignupMail } = require("../config/nodemailer-setup.js");
+
+// to encrypt passwords
+//const bcrptySalt = 10;
+
+
+// 📨 CODE FOR EXPRESS USERS EMAIL OPTION. REPLACE ABOVE CODE IF YOU WANT TO USE   📪 
+// User.create({fullName, username, email, encryptedPassword })
+//     .then(userDoc => {
+//       // EXPRESS USERS EMAIL OPTION 
+//       sendSignupMail(userDoc) 
+//       .then(() => { 
+//       req.flash("success!, signup!);
+//       res.redirect("/");
+//     })
+//     .catch(err => next(err));
+//   })
+//     .catch(err => next(err));
+// });

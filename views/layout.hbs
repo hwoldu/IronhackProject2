@@ -15,7 +15,14 @@
 
   <header>
     <div>
+
+      {{#if currentUser}}     
+      <h1 class="email">Hey {{currentUser.username}}!</h1>
+      {{else}}
       <h1 class="home-title">{{title}}</h1>
+      {{/if}}
+
+      
     </div>
 
     <nav class="nav-bar">
@@ -34,8 +41,7 @@
       {{!-- 
       }) --}}
     
-      {{#if currentUser}}
-      <p class="email">Hey {{currentUser.username}}!</p>
+      {{#if currentUser}}     
 
         <a href="/recipe/add">Add a recipe</a>
         <a href="/recipe/my-recipes">My recipes</a>
