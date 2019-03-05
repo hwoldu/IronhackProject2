@@ -29,8 +29,7 @@ html {
 
 .spring h2 {
   color:#15A071;
-  padding-left: 1%;
-  margin: 5% 0 0 5%;
+  margin-top: 20px;
 }
 
 .summer h2 {
@@ -107,6 +106,9 @@ html {
   padding-bottom: 20px;
 }
 
+.col-12 {
+  padding: 0;
+}
 
 .form {
   display: block;
@@ -176,13 +178,14 @@ header {
   text-decoration: none;
 }
 
-.home {
-  padding-left: 1%;
-  margin: 7%;
+.intro p {
+  text-align: left;
 }
 
-.intro p {
-  padding-right: 50%;
+.intro,
+.intro h2,
+.intro h3 {
+  text-align: left;
 }
 
 .active {
@@ -210,19 +213,20 @@ header {
 
 .produces {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
 .container-prod {
   position: relative;
-  width: 30%;
   padding-bottom: 20px;
 
 }
 
 .image {
   display: block;
+  margin-bottom: 10px;
+  padding-right: 10px;
   width: 100%;
   max-height: 150px;
   border-radius: 3%;
@@ -230,7 +234,7 @@ header {
   object-position: center;
 }
 
-.overlay {
+.produces.overlay {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -266,13 +270,13 @@ a:link {
   text-decoration: none;
 }
 
-// div.polaroid {
-//   width: 30%;
-//   height: 30%;
-//   background-color: white;
-//   margin-bottom: 20px;
-//   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-// }
+div.polaroid {
+  width: 30%;
+  height: 30%;
+  background-color: white;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 
 .recipes img {
   display: block;
@@ -284,7 +288,6 @@ a:link {
 
 div.container {
   text-align: center;
-  padding: 10px 20px;
 }
 
 .recipes {
@@ -342,7 +345,7 @@ body {
   background: rgba(240,235,215,.5);
 }
 
-.container {
+.container-recipes {
   text-align: center;
   
   div {

@@ -19,8 +19,7 @@ html {
 
 .spring h2 {
   color: #15A071;
-  padding-left: 1%;
-  margin: 5% 0 0 5%; }
+  margin-top: 20px; }
 
 .summer h2 {
   color: #F172A1;
@@ -87,6 +86,9 @@ html {
   padding-top: 20px;
   padding-bottom: 20px; }
 
+.col-12 {
+  padding: 0; }
+
 .form {
   display: block;
   margin: 0 33%;
@@ -142,12 +144,13 @@ header {
   display: flex;
   text-decoration: none; }
 
-.home {
-  padding-left: 1%;
-  margin: 7%; }
-
 .intro p {
-  padding-right: 50%; }
+  text-align: left; }
+
+.intro,
+.intro h2,
+.intro h3 {
+  text-align: left; }
 
 .active {
   width: 50%;
@@ -164,23 +167,24 @@ header {
 
 .produces {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap; }
 
 .container-prod {
   position: relative;
-  width: 30%;
   padding-bottom: 20px; }
 
 .image {
   display: block;
+  margin-bottom: 10px;
+  padding-right: 10px;
   width: 100%;
   max-height: 150px;
   border-radius: 3%;
   object-fit: cover;
   object-position: center; }
 
-.overlay {
+.produces.overlay {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -208,6 +212,13 @@ header {
 a:link {
   text-decoration: none; }
 
+div.polaroid {
+  width: 30%;
+  height: 30%;
+  background-color: white;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+
 .recipes img {
   display: block;
   width: 100%;
@@ -216,8 +227,7 @@ a:link {
   object-position: center; }
 
 div.container {
-  text-align: center;
-  padding: 10px 20px; }
+  text-align: center; }
 
 .recipes {
   display: flex;
@@ -258,9 +268,9 @@ section.one-recipe {
 body {
   background: rgba(240, 235, 215, 0.5); }
 
-.container {
+.container-recipes {
   text-align: center; }
-  .container div {
+  .container-recipes div {
     position: relative;
     display: inline-block;
     height: 200px;
@@ -270,12 +280,12 @@ body {
     margin: 60px 15px;
     transition: 0.7s all cubic-bezier(0.785, 0.135, 0.15, 0.86);
     box-shadow: 0 10px 50px -20px rgba(0, 0, 0, 0.75); }
-    .container div img {
+    .container-recipes div img {
       width: 150%;
       margin: -25% -25%;
       min-height: 100%;
       transition: 0.7s all cubic-bezier(0.785, 0.135, 0.15, 0.86); }
-    .container div span {
+    .container-recipes div span {
       position: absolute;
       bottom: -20px;
       left: 20px;
@@ -283,7 +293,7 @@ body {
       color: rgba(255, 255, 255, 0);
       font-size: 1.5rem;
       transition: 0.8s all cubic-bezier(0.785, 0.135, 0.15, 0.86); }
-    .container div:before {
+    .container-recipes div:before {
       content: '';
       position: absolute;
       background: rgba(255, 255, 255, 0.1);
@@ -293,18 +303,18 @@ body {
       top: -40px;
       left: -200px;
       transition: 1s all cubic-bezier(0.785, 0.135, 0.15, 0.86); }
-    .container div:hover {
+    .container-recipes div:hover {
       cursor: pointer;
       transform: scale(1.2);
       border-radius: 10px; }
-      .container div:hover:before {
+      .container-recipes div:hover:before {
         content: '';
         left: 350px; }
-      .container div:hover img {
+      .container-recipes div:hover img {
         width: 100%;
         margin: 0;
         min-height: 100%; }
-      .container div:hover span {
+      .container-recipes div:hover span {
         color: white;
         background-color: rgba(19, 3, 3, 0.8);
         bottom: 20px; }

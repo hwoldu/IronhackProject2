@@ -1,29 +1,42 @@
-<section class="home">
-  <section class="intro">
-    <h2>SZNal</h2>
-    <p>
-      SZNal is a website that presents you only recipes made from seasonal fruits and vegetables. 
-      Why? Because being conscious on what you consume has an impact on the environment and on your health. 
-      Eating local and seasonal reduces pollution (less water, less transport, less energy) and also gives you more vitamins. 
-      Feel better, eat better.
-    </p>
-  </section>
+<section class="intro">
 
-  <h3>Ideas of seasonal products</h3>
-  <section class="produces"> 
-
-    {{#each produces}}  
-      <div class="container-prod">
-        <img src="{{this.image}}" class="image">
-        <div class="overlay">
-          <div class="text">{{this.name}}</div>
-        </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-sm-8">
+        <h2>SZNal</h2>
+        <p>
+          SZNal is a website that presents you only recipes made from seasonal fruits and vegetables.
+          Why? Because being conscious on what you consume has an impact on the environment and on your health.
+          Eating local and seasonal reduces pollution (less water, less transport, less energy) and also gives you more
+          vitamins.
+          Feel better, eat better.
+        </p>
       </div>
-    {{/each}}
+      <div class="col-6 col-sm-8"></div>
+    </div>
 
-  </section>
+    <div class="row">
+      <div class="col-12">
+        <h3>Ideas of seasonal products</h3>
+      </div>
+    </div>
 
+    <div class="row">
+      <div class="col-12">
+        <section class="produces">
+
+          {{#each produces}}
+          <div class="col-12 col-sm-6 col-md-4">
+            <img src="{{this.image}}" class="image">
+            <div class="overlay">
+              <div class="text">{{this.name}}</div>
+            </div>
+          </div>
+          {{/each}}
+        </section>
+      </div>
+    </div>
+
+  </div>
 
 </section>
-
-
