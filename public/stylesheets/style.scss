@@ -234,19 +234,18 @@ header {
   object-position: center;
 }
 
-.produces.overlay {
+.overlay {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   max-height: 150px;
-  width: 100%;
+  width: 98%;
   opacity: 0;
   transition: .5s ease;
   background-color: black;
   border-radius: 3%;
-  
 }
 
 .container-prod:hover .overlay {
