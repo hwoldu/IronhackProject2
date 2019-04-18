@@ -1,13 +1,21 @@
-<h2>All {{season}} recipes</h2>
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-sm-8">
 
-<div class="container-recipes">
-  {{#each recipeSchema}}  
-  <div>
-    <a href="/recipe-one/{{this._id}}">
-    <span>{{this.title}}</span>
-    <img src="{{this.image}}" alt="">
-    </a>
-  </div>
-   {{/each}}
-  
+      <h2>All {{season}} recipes</h2>
+
+    </div>
 </div>
+
+    <div class="container-recipes">
+      {{#each recipeSchema}}
+      <div class="recipe-effect">
+        <a href="/recipe-one/{{this._id}}">
+          <span>{{this.title}}</span>
+          <img src="{{this.image}}" alt="">
+        </a>
+      </div>
+      {{/each}}
+
+    </div>
+  </div>

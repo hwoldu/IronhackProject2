@@ -234,9 +234,6 @@ div.polaroid {
   object-fit: cover;
   object-position: center; }
 
-div.container {
-  text-align: center; }
-
 .recipes {
   display: flex;
   justify-content: space-around;
@@ -247,6 +244,9 @@ div.container {
   padding-left: 15px;
   padding-right: 15px;
   height: 2.1em; }
+
+.recipe-effect {
+  width: 300px !important; }
 
 .div1-oneRecipe {
   display: flex; }
