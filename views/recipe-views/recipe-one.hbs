@@ -22,6 +22,10 @@
   </div>
 
   <div>
-    <p>{{recipeItem.description}}</p>
+          <ol>
+        {{#each recipeItem.description}}
+        <li class="type-sidelines"><span>{{this}}</span></li>
+        {{/each}}
+      </ol>
   </div>
 </section>
