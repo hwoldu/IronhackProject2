@@ -591,6 +591,39 @@ const recipeSchema = [
     "season": "autumn"
   },
 
+  {
+    "title": "Pea & broad bean shakshuka",
+    "level": "easy",
+    "ingredients": [
+      "1 bunch asparagus spears",
+      "200g sprouting broccoli",
+      "2 tbsp olive oil",
+      "2 spring onions, finely sliced",
+      "2 tsp cumin seeds",
+      "large pinch cayenne pepper, plus extra to serve",
+      "4 ripe tomatoes, chopped",
+      "1 small pack parsley, finely chopped",
+      "50g shelled peas",
+      "50g podded broad beans",
+      "4 large eggs",
+      "50g pea shoots",
+      "Greek yogurt and flatbreads, to serve"
+      ],
+    "dishType": "main dish",
+    "description": [
+      "Trim or snap the woody ends of the asparagus and finely slice the spears, leaving the tips and about 2cm at the top intact.", 
+      "Finely slice the broccoli in the same way, leaving the heads and about 2cm of stalk intact. Heat the oil in a frying pan.", 
+      "Add the spring onions, sliced asparagus and sliced broccoli, and fry gently until the veg softens a little, then add the cumin seeds, cayenne, tomatoes (with their juices), parsley and plenty of seasoning, and stir.", 
+      "Cover with a lid and cook for 5 mins to make a base sauce, then add the asparagus spears, broccoli heads, peas and broad beans, cover again and cook for 2 mins.", 
+      "Make 4 dips in the mixture.", 
+      "Break an egg into each dip, arrange half the pea shoots around the eggs, season well, cover with a lid and cook until the egg whites are just set.", 
+      "Serve with the rest of the pea shoots, a spoonful of yogurt and some flatbreads, and sprinkle over another pinch of cayenne, if you like.", 
+    ],
+    "image": "/images/autumn/recipes/pea-shakshuka.jpg",
+    "duration": 50,
+    "season": "spring"
+  },
+
 ]
 
 

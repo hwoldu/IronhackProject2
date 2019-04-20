@@ -87,7 +87,7 @@ var month = date.toString().slice(4, 7);
 
 app.use((req, res, next ) => {
   
-  if ( month === "Apr" || month === "May"  ) {
+  if (  month === "Mar" || month === "Apr" || month === "May"  ) {
     res.locals.season = "spring";
 }
   else if  ( month === "Jun" ||  month === "Jul" ||  month === "Aug" ) {
@@ -96,7 +96,7 @@ app.use((req, res, next ) => {
   else if ( month === "Sep" || month === "Oct" || month === "Nov"  ) {
     res.locals.season = "autumn";
   }
-  else if ( month === "Dec" ||  month === "Jan" || month === "Feb" || month === "Mar"  ) {
+  else if ( month === "Dec" ||  month === "Jan" || month === "Feb"  ) {
     res.locals.season = "winter";
   }
 
