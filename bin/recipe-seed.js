@@ -619,7 +619,7 @@ const recipeSchema = [
       "Break an egg into each dip, arrange half the pea shoots around the eggs, season well, cover with a lid and cook until the egg whites are just set.", 
       "Serve with the rest of the pea shoots, a spoonful of yogurt and some flatbreads, and sprinkle over another pinch of cayenne, if you like.", 
     ],
-    "image": "/images/autumn/recipes/pea-shakshuka.jpg",
+    "image": "/images/spring/recipes/pea-shakshuka.jpg",
     "duration": 50,
     "season": "spring"
   },

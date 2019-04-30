@@ -94,7 +94,9 @@ h3 {
   padding-top: 20px;
   padding-bottom: 20px; }
 
-.col-12 {
+.col-12,
+.col-8,
+.col-sm-4 {
   padding: 0; }
 
 .form {
@@ -266,6 +268,11 @@ section.one-recipe {
 
 .level-duration-ingredients {
   margin-right: 5em; }
+
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+  display: block; }
 
 .level,
 .duration,

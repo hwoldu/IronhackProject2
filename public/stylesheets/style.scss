@@ -110,9 +110,14 @@ h3 {
   padding-bottom: 20px;
 }
 
-.col-12 {
+.col-12,
+.col-8,
+.col-sm-4
+ {
   padding: 0;
 }
+
+
 
 .form {
   display: block;
@@ -333,6 +338,12 @@ section.one-recipe {
 .level-duration-ingredients {
   margin-right: 5em;
   //background-color: rgba(188, 171, 174, 1);
+}
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+  display:block;
+
 }
 
 .level,
