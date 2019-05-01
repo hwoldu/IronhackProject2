@@ -16,21 +16,20 @@
 <body class="{{season}}">
 
   <header>
-    <div>
-
-      {{#if currentUser}}
-      <h1 class="email">Hey {{currentUser.username}}!</h1>
-      {{else}}
-      <h1 class="home-title">{{title}}</h1>
-      {{/if}}
-
-
+    <div class="container">
+      <div class="col-8 col-sm-4">
+        {{#if currentUser}}
+        <h1 class="email">Hey {{currentUser.username}}!</h1>
+        {{else}}
+        <h1 class="home-title">{{title}}</h1>
+        {{/if}}
+      </div>
     </div>
-
-    <nav class="nav-bar">
-      <div class="main-menu">
-        <a href="/">Home</a>
-        <a href="/recipe-list">Recipes</a>
+    <nav class="container topnav nav-bar">
+      <div class="row">
+      <div class="col-6 main-menu">
+        <a href="/">HOME</a>
+        <a href="/recipe-list">RECIPES</a>
       </div>
       {{!-- 
       <input type="text" id="login" placeholder="Type here">
@@ -44,14 +43,20 @@
       }) --}}
 
       {{#if currentUser}}
+      <div class="col-6 main-menu">
 
-      <a href="/recipe/add">Add a recipe</a>
-      <a href="/recipe/my-recipes">My recipes</a>
-      <a href="/logout">Log Out</a>
-
+        <a href="/recipe/add">Add a recipe</a>
+        <a href="/recipe/my-recipes">My recipes</a>
+        <a href="/logout">Log Out</a>
+      </div>
       {{else}}
-      <a href="/login">Log In</a>
-      <a href="/signup">Sign Up</a>
+      <div class="col-6 main-menu">
+
+        <a href="/login">LOG IN</a>
+        <a href="/signup">SIGN UP</a>
+      </div>
+      </div>
+
       {{/if}}
     </nav>
   </header>

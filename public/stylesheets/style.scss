@@ -19,33 +19,45 @@ h3 {
   font-weight: bold;
 }
 
+.container {
+  padding: 0 !important;
+}
+
+.row {
+  margin: 0;
+}
+
 
 .winter h2 {
   color:#990000;
   font-size: 25px;
   font-weight: bold;
-  margin-top: 7%;
+  margin-top: 60px;
+  margin-bottom: 30px;
 }
 
 .spring h2 {
   color:#15A071;
   font-size: 25px;
   font-weight: bold;
-  margin-top: 7%;
+  margin-top: 60px;
+  margin-bottom: 30px;
 }
 
 .summer h2 {
   color: #F172A1;
   font-size: 25px;
   font-weight: bold;
-  margin-top: 7%;
+  margin-top: 60px;
+  margin-bottom: 30px;
 }
 
 .autumn h2 {
   color: #FFAE19;
   font-size: 25px;
   font-weight: bold;
-  margin-top: 7%;
+  margin-top: 60px;
+  margin-bottom: 30px;
 }
 
 .autumn h3 {
@@ -139,22 +151,45 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  height : 30vh;
+  height : 50vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 
-.nav-bar {
-  background-color: #130303;
-  margin-top: 20px;
-  height : 20px;
+// .nav-bar {
+//   background-color: #130303;
+//   margin-top: 20px;
+//   height : 20px;
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-around;
+//   padding-bottom: 20px;
+//   padding-top: 20px;
+// }
+
+.topnav {
+  background-color:  white;
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
   display: flex;
-  align-items: center;
-  justify-content: space-around;
-  padding-bottom: 20px;
-  padding-top: 20px;
+  color: #130303;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+  border-bottom: 3px solid transparent;
+}
+
+.topnav a:hover {
+  border-bottom: 3px solid #130303;
+}
+
+.topnav a.active {
+  border-bottom: 3px solid #130303;
 }
 
 
@@ -162,8 +197,7 @@ header {
   color: white;
   font-family: 'Paytone One', sans-serif;
   font-size: 300%;
-  padding-left: 100px;
-  padding-top: 30px;
+  padding-top: 20%;
   margin: 0;
 }
 
@@ -172,10 +206,10 @@ header {
   padding-top: 300px;
 }
 
-.nav-bar a {
-  text-decoration: none;
-  color: white;
-}
+// .nav-bar a {
+//   text-decoration: none;
+//   color: white;
+// }
 
 .list-recipes img {
   width: 25%;
@@ -228,8 +262,6 @@ header {
 
 .container-prod {
   position: relative;
-  padding-bottom: 20px;
-
 }
 
 .image {
@@ -349,13 +381,9 @@ section.one-recipe {
 .level,
 .duration,
 .ingredients {
-  background-color:  rgba(188, 171, 174, 0.5);
   width: 200px;
-}
-
-
-body {
-  background: rgba(240,235,215,.5);
+  font-weight: bolder;
+  font-size: 20px;
 }
 
 .container-recipes {

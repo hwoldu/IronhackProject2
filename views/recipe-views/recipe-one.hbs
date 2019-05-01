@@ -1,25 +1,25 @@
 <div class="container">
   <div class="row">
-    <div class="col-8 col-sm-4">
+    <div class="col-12">
       <h2>{{recipeItem.title}}</h2>
     </div>
   </div>
   <div class="row">
-    <div class="col-8 col-sm-4 img-thumbnail">
+    <div class="col-10 col-sm-9">
 
-      <p class="level">Level:</p>
+      <p class="level">Level</p>
       <p>{{recipeItem.level}}</p>
-      <p class="duration">Duration:</p>
+      <p class="duration">Duration</p>
       <p>{{recipeItem.duration}} min</p>
 
-      <p class="ingredients">Ingredients:</p>
+      <p class="ingredients">Ingredients</p>
       <ul>
         {{#each recipeItem.ingredients}}
         <li class="type-sidelines"><span>{{this}}</span></li>
         {{/each}}
       </ul>
     </div>
-    <div class="col-4 col-sm-4">
+    <div class="col-2 col-sm-3">
       <img src="{{recipeItem.image}}" class="img-responsive img-thumbnail" alt={{recipeItem.title}}>
     </div>
   </div>
